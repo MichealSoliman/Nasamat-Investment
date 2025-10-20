@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نسمات للاستثمار — المقاولات</title>
+  <meta name="description" content="نسمات للاستثمار — مقاولات عامة، تشطيب، وتسليم مشاريع بجودة عالية."/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    :root{
+      --primary:#8B4513; /* brown */
+      --muted:#808080;
+      --accent:#F59E0B;
+    }
+    body{ font-family: 'Noto Sans Arabic', system-ui, sans-serif; }
+    .top-offset{ padding-top:5.5rem; } /* to offset fixed header */
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 bg-white shadow z-50">
+    <div class="container mx-auto px-4 flex items-center justify-between h-14">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=80&auto=format&fit=crop" alt="لوغو نسمات" class="w-10 h-10 rounded">
+        <span class="text-lg font-bold" style="color:var(--primary)">نسمات للاستثمار</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-base">
+        <a href="index.html" class="hover:text-[var(--primary)]">الرئيسية</a>
+        <a href="hotels.html" class="hover:text-[var(--primary)]">الخدمات الفندقية</a>
+        <a href="commercial.html" class="hover:text-[var(--primary)]">المجال التجاري</a>
+        <a href="#contact" class="hover:text-[var(--primary)]">اتصل بنا</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 rounded border"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="index.html" class="py-2">الرئيسية</a>
+        <a href="hotels.html" class="py-2">الخدمات الفندقية</a>
+        <a href="commercial.html" class="py-2">المجال التجاري</a>
+        <a href="#contact" class="py-2">اتصل بنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="top-offset">
+
+    <!-- Hero -->
+    <section class="relative">
+      <div class="h-[72vh] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1505842465776-3d5c18f8fa6d?q=80&w=1600&auto=format&fit=crop')">
+        <div class="absolute inset-0 bg-black/50 flex items-center">
+          <div class="container mx-auto px-4 text-right text-white">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4" data-aos="fade-right">شركة نسمات للاستثمار — متخصصون في المقاولات والبناء</h1>
+            <p class="max-w-2xl text-sm md:text-lg mb-6" data-aos="fade-right" data-aos-delay="150">
+              تنفيذ مشاريع البناء والتشطيب من الفكرة حتى التسليم بخبرة ومهنية تضمن الجودة والالتزام.
+            </p>
+            <a href="#services" class="inline-block bg-[var(--primary)] hover:bg-[#7a3f0f] text-white px-6 py-3 rounded-lg shadow" data-aos="fade-up" data-aos-delay="300">تعرف على خدماتنا</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-right">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color:var(--primary)">من نحن</h2>
+        <p class="text-gray-700 max-w-3xl leading-relaxed">
+          شركة نسمات للاستثمار تقدم حلول المقاولات المتكاملة: دراسات، تصميم، تنفيذ، وتشطيب. نعمل بمعايير صارمة للجودة والسلامة لننجز مشاريع سكنية وتجارية وصناعية وفق الجداول والميزانيات المتفق عليها.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-50" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-right">
+        <h3 class="text-xl md:text-2xl font-bold mb-6" style="color:var(--primary)">خدماتنا</h3>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-[var(--accent)] text-3xl"><i class="fa-solid fa-drafting-compass"></i></div>
+              <h4 class="text-lg font-semibold">التخطيط والتصميم</h4>
+            </div>
+            <p class="text-sm text-gray-600">تصاميم تنفيذية ودراسات جدوى ومخططات هندسية متوافقة مع المعايير.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-[var(--accent)] text-3xl"><i class="fa-solid fa-building"></i></div>
+              <h4 class="text-lg font-semibold">أعمال الإنشاء</h4>
+            </div>
+            <p class="text-sm text-gray-600">إدارة مواقع، أعمال خرسانة، وهياكل إنشائية بإشراف محترف.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <div class="flex items-center justify-between mb-3">
+              <div class="text-[var(--accent)] text-3xl"><i class="fa-solid fa-paint-roller"></i></div>
+              <h4 class="text-lg font-semibold">التشطيبات والديكور</h4>
+            </div>
+            <p class="text-sm text-gray-600">تشطيبات داخلية وخارجية بجودة عالية والتزام باللمسات الجمالية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="py-16 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-right">
+        <h3 class="text-xl md:text-2xl font-bold mb-6" style="color:var(--primary)">معرض المشاريع</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <img alt="مشروع 1" src="https://images.unsplash.com/photo-1523475496153-3d6cc3b708b9?q=80&w=800&auto=format&fit=crop" class="w-full h-36 object-cover rounded-lg hover:scale-105 transition">
+          <img alt="مشروع 2" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop" class="w-full h-36 object-cover rounded-lg hover:scale-105 transition">
+          <img alt="مشروع 3" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800&auto=format&fit=crop" class="w-full h-36 object-cover rounded-lg hover:scale-105 transition">
+          <img alt="مشروع 4" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop" class="w-full h-36 object-cover rounded-lg hover:scale-105 transition">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-right">
+        <h3 class="text-xl md:text-2xl font-bold mb-6" style="color:var(--primary)">آراء العملاء</h3>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide p-6 bg-white rounded-xl shadow">
+              <p class="italic text-gray-700 mb-3">"التزام واحترافية طوال فترة التنفيذ. تجربة مميزة مع نسمات."</p>
+              <div class="font-semibold" style="color:var(--primary)">- عبدالله</div>
+            </div>
+            <div class="swiper-slide p-6 bg-white rounded-xl shadow">
+              <p class="italic text-gray-700 mb-3">"تشطيبات رائعة وتسليم حسب الموعد المتفق."</p>
+              <div class="font-semibold" style="color:var(--primary)">- شركة عقارية</div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-white" data-aos="fade-up">
+      <div class="container mx-auto px-4 text-right">
+        <h3 class="text-xl md:text-2xl font-bold mb-6" style="color:var(--primary)">تواصل معنا</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="space-y-3">
+            <p class="text-gray-700">📍 الرياض، المملكة العربية السعودية</p>
+            <p class="text-gray-700">📞 050-1234-567</p>
+            <p class="text-gray-700">✉️ info@nasmat.com</p>
+            <p class="text-gray-700">ساعات العمل: السبت - الخميس 8:00 - 18:00</p>
+          </div>
+
+          <form id="contactForm" class="bg-gray-50 p-6 rounded-xl shadow">
+            <div class="mb-3">
+              <label class="block text-sm mb-1">الاسم</label>
+              <input id="name" type="text" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div class="mb-3">
+              <label class="block text-sm mb-1">البريد الإلكتروني</label>
+              <input id="email" type="email" class="w-full border rounded px-3 py-2" required>
+            </div>
+            <div class="mb-3">
+              <label class="block text-sm mb-1">الرسالة</label>
+              <textarea id="message" rows="4" class="w-full border rounded px-3 py-2" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="bg-[var(--primary)] text-white px-5 py-2 rounded hover:shadow">إرسال</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-right">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <div class="text-lg font-bold" style="color:var(--primary)">نسمات للاستثمار</div>
+          <div class="text-sm text-gray-300">مقاولات عامة — خدمات فندقية — تجارة</div>
+        </div>
+        <div class="text-sm text-gray-300">
+          <div>📞 050-1234-567</div>
+          <div>✉️ info@nasmat.com</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="mt-6 text-center text-xs text-gray-400">© 2025 نسمات للاستثمار — جميع الحقوق محفوظة</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Initialize AOS
+    AOS.init({ duration: 900, once: true });
+
+    // Initialize Swiper
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+    });
+
+    // Contact form simple validation
+    document.getElementById('contactForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){ alert('الرجاء ملء جميع الحقول.'); return; }
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if(!emailPattern.test(email)){ alert('الرجاء إدخال بريد إلكتروني صالح.'); return; }
+      alert('تم استلام رسالتك. شكرًا لتواصلك مع نسمات.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
