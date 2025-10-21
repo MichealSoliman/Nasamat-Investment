@@ -65,7 +65,7 @@
         }
         
         .hero-section {
-            background: linear-gradient(135deg, rgba(17, 24, 38, 0.9) 0%, rgba(217, 119, 6, 0.8) 100%), 
+            background: linear-gradient(135deg, rgba(17, 24, 38, 0.9) 0%, rgba(40, 92, 82, 0.8) 100%), 
                         url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
         }
         
@@ -148,33 +148,56 @@
 <body class="bg-gray-50">
       <!-- Header -->
 <header class="fixed w-full bg-white shadow-md z-50">
-  <div class="container mx-auto px-4 py-1 flex items-center justify-between">
-    
-    <!-- Logo -->
-    <div class="flex items-center">
-<!-- Logo -->
-<div class="flex items-center">
-  <div class="w-12 h-15  overflow-hidden flex items-center justify-center  ">
-    <img 
-      src="./asstes/img/unnamed.png" 
-      alt="شعار نسمات للاستثمار" 
-      class="w-full h-full object-cover"
-    >
-  </div>
-  <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
-</div>
 
-      
+  <!-- Top Contact + Social (desktop only) -->
+  <div class="bg-[#f5f5f5] text-sm text-gray-700 py-3 px-6 border-b border-gray-200 hidden md:flex justify-around items-center">
+    <div class="flex items-center gap-4 rtl:flex-row-reverse">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-phone-alt text-[#285b52]"></i>
+        <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-envelope text-[#285b52]"></i>
+        <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+      </div>
     </div>
 
-    <!-- Navigation (Centered) -->
+    <div class="flex items-center gap-4 rtl:flex-row">
+      <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/nsmatco" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/nsmat.co/" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/966172834228"target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="container mx-auto px-4 py-1 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+      <div class="w-12 h-15 overflow-hidden flex items-center justify-center">
+        <img src="../asstes/img/unnamed (2).png" alt="شعار نسمات للاستثمار" class="w-full h-full object-cover" />
+      </div>
+      <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
+    </div>
+
+    <!-- Navigation (desktop) -->
     <nav class="hidden md:flex flex-1 justify-center space-x-8 space-x-reverse">
-      <a href="index.html" class="text-construction-brown hover:text-construction-gray font-medium">الرئيسية</a>
-      <a href="hotels.html" class="text-gray-600 hover:text-construction-brown font-medium">الخدمات الفندقية</a>
-      <a href="commercial.html" class="text-gray-600 hover:text-construction-brown font-medium">المجال التجاري</a>
+      <a href="../index.html" class="text-construction-brown hover:text-[#285c52] font-medium">الرئيسية</a>
+      
+      <a href="hotels.html" class="text-gray-600 hover:text-[#285c52] font-medium">الخدمات الفندقية</a>
+      <a href="commercial.html" class="text-gray-600 hover:text-[#285c52] font-medium">المجال التجاري</a>
     </nav>
 
-    <!-- Call Button -->
+    <!-- Call To Action (desktop) -->
     <div class="hidden md:block">
       <a href="#contact" class="border-2 border-[#285c52] text-[#285c52] hover:bg-[#285c52] hover:text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
         اتصل بنا
@@ -182,29 +205,77 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="md:hidden text-construction-brown">
-      <i class="fas fa-bars text-xl"></i>
+    <button id="mobile-menu-button" class="md:hidden text-construction-brown text-3xl p-2 focus:outline-none">
+      <i class="fas fa-bars"></i>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
-    <div class="flex flex-col space-y-4">
-      <a href="index.html" class="text-construction-brown font-medium py-2">الرئيسية</a>
-      <a href="hotels.html" class="text-gray-600 font-medium py-2">الخدمات الفندقية</a>
-      <a href="commercial.html" class="text-gray-600 font-medium py-2">المجال التجاري</a>
-      <a href="#contact" class="text-gray-600 font-medium py-2">اتصل بنا</a>
+  <!-- Mobile Sidebar Menu -->
+  <aside
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl rounded-l-3xl transform translate-x-full transition-transform duration-400 ease-in-out z-50 overflow-y-auto"
+    aria-label="Mobile menu"
+  >
+    <div class="flex flex-col h-full p-6">
+
+      <!-- Close Button -->
+      <button
+        id="mobile-menu-close"
+        class="self-start mb-8 text-gray-700 hover:text-[#285b52] text-3xl focus:outline-none"
+        aria-label="Close menu"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="flex flex-col space-y-6 rtl:text-right">
+        <a href="../index.html" class="text-construction-brown font-semibold text-lg hover:text-[#285c52] transition-colors duration-300">الرئيسية</a>
+     
+        <a href="commercial.html" class="text-gray-700 font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">المجال التجاري</a>
+        <a href="commercial.html" class="text-gray-700 font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">المجال الفندقية</a>
+        <a href="#contact" class="text-white p-2 text-center rounded-lg font-semibold border border-[#285b52] bg-[#285b52] text-lg hover:text-[#285b52] transition-colors duration-300">اتصل بنا</a>
+      </nav>
+
+      <hr class="my-6 border-gray-300" />
+
+      <!-- Contact Info -->
+      <div class="text-gray-700 text-sm space-y-4 rtl:text-right mt-auto">
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-phone-alt text-[#285b52]"></i>
+          <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+        </div>
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-envelope text-[#285b52]"></i>
+          <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-6 mt-4 text-[#285b52] justify-end text-2xl">
+          <a href="https://facebook.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/966172834228"target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </aside>
 </header>
 
     <!-- Hero Section -->
-    <section class="hero-section pt-24 pb-20 text-white overflow-hidden h-[700px]">
+    <section class="hero-section pt-24 pb-20 text-white overflow-hidden h-[700px] rounded-b-[80px] lg:rounded-b-[120px]">
 <div class="container mx-auto px-4 text-center pt-10 pb-20 text-white">
   <div class="max-w-4xl mx-auto" data-aos="fade-up">
     
     <!-- العنوان -->
-    <h1 class="text-4xl md:text-6xl font-bold mb-6 font-amiri text-shadow-lg">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 font-amiri text-shadow-lg pt-5">
       خدمات المقاولات المتكاملة
     </h1>
     
@@ -330,7 +401,7 @@
                             <i class="fas fa-phone"></i> 
                             استشر خبراءنا
                         </a>
-                        <a href="https://wa.me/966500000000" target="_blank" class="border-2 primary-border primary-color hover:primary-bg hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <a href="https://wa.me/966172233888 "target="_blank" class="border-2 primary-border primary-color hover:primary-bg hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
                             <i class="fab fa-whatsapp"></i> 
                             تواصل مباشر
                         </a>
@@ -757,7 +828,7 @@
                 <a href="tel:0548041579" class="bg-[#285c52] text-primary-bg hover:bg-white hover:text-[#285c52] font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
                     <i class="fas fa-phone ml-2"></i> اتصل بنا الآن
                 </a>
-                <a href="https://wa.me/966500000000" target="_blank" class="border-2 border-white hover:bg-white hover:text-[#285c52] font-bold py-3 px-8 rounded-lg transition duration-300">
+                <a href="https://wa.me/966172233888 target="_blank" class="border-2 border-white hover:bg-white hover:text-[#285c52] font-bold py-3 px-8 rounded-lg transition duration-300">
                     <i class="fab fa-whatsapp ml-2"></i> تواصل عبر واتساب
                 </a>
             </div>
