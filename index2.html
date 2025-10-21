@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبني المستقبل بخطوات ثابتة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .text-animation {
+            animation: slideInFromRight 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+        .delay-4 { animation-delay: 1.2s; }
+        
+        .content-container {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- سكشن الخلفية المتحركة -->
+<section class="relative bg-gray-900 text-white min-h-screen flex items-center overflow-visible">
+  <!-- خلفية الصور المتحركة -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2069&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=2074&q=80');"></div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1974&q=80');"></div>
+  </div>
+
+  <!-- المحتوى -->
+  <div class="relative z-10 w-full flex justify-start">
+    <div class="content-container w-full md:w-2/3 lg:w-1/2 min-h-screen flex items-center py-12 pr-[100px]">
+      <div class="px-8 md:px-16 w-full">
+        <div class="mb-8 text-animation">
+          <h2 class="text-2xl font-bold text-[#285b52]">شركة المستقبل</h2>
+        </div>
+        <h1 class="text-5xl font-bold mb-6 text-animation delay-1">نبني المستقبل بخطوات ثابتة مضمونة</h1>
+        <p class="text-2xl mb-12 text-gray-300 text-animation delay-1">بخبرة ومعرفة ورؤية واضحة</p>
+
+       <div class="bg-gradient-to-l from-[#285b52]/80 to-transparent p-6 rounded-lg border-r-4 border-[#285b52] mb-10 text-animation delay-2">
+  <p class="text-xl font-medium text-white">لغتنا العمل والإتقان في كل التفاصيل لتحقيق التطور المستدام.</p>
+</div>
+
+
+        <div class="mb-12 text-animation delay-3">
+          <button class="border border-[#285b52] hover:bg-[#285b52] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+            ابدأ المشروع
+          </button>
+        </div>
+
+        <!-- نقاط التنقل -->
+        <div class="flex justify-start mt-12 space-x-4 rtl:space-x-reverse">
+          <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300"></button>
+          <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300"></button>
+          <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- البانر الأخضر مع الأنيميشن -->
+<section class="relative bg-[#285b52] text-white py-12 -mt-24 rounded-[3rem] z-20 w-[75%] m-auto overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-stretch text-center gap-6">
+    
+    <!-- الكارت 1 -->
+    <div class="card flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 translate-x-[80px]">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-calendar-check"></i></div>
+      <h3 class="font-bold text-lg mb-2">التزام بالمواعيد والميزانية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">نحرص على تسليم المشاريع في الوقت المحدد وضمن الميزانية المتفق عليها</p>
+    </div>
+
+    <!-- الكارت 2 -->
+    <div class="card flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 translate-y-[80px]">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-handshake"></i></div>
+      <h3 class="font-bold text-lg mb-2">خبرة وكفاءة عالية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">فريقنا المتخصص يمتلك الخبرة الكافية لتنفيذ المشاريع بأحدث التقنيات</p>
+    </div>
+
+    <!-- الكارت 3 -->
+    <div class="card flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 -translate-x-[80px]">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-gem"></i></div>
+      <h3 class="font-bold text-lg mb-2">جودة عالية ومعايير عالمية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">نلتزم بتقديم خدمات وفق أعلى معايير الجودة العالمية</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+/* إعدادات الانتقال */
+.card {
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* عند ظهور الأنيميشن */
+.card.show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* تأثير خفيف عند المرور */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background-color: #2e6a60;
+}
+</style>
+
+<script>
+// تشغيل الأنيميشن عند تحميل الصفحة
+window.addEventListener("load", () => {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("show");
+    }, index * 300); // تأخير بسيط بين كل كارت
+  });
+});
+</script>
+
+
+
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.slide-indicator');
+const totalSlides = slides.length;
+indicators[0].classList.add('bg-white', 'bg-opacity-100', 'scale-125');
+
+setInterval(() => changeSlide((currentSlide + 1) % totalSlides), 5000);
+
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => changeSlide(index));
+});
+
+function changeSlide(index) {
+  slides[currentSlide].classList.remove('active');
+  indicators[currentSlide].classList.remove('bg-white', 'bg-opacity-100', 'scale-125');
+  currentSlide = index;
+  slides[currentSlide].classList.add('active');
+  indicators[currentSlide].classList.add('bg-white', 'bg-opacity-100', 'scale-125');
+}
+</script>
+
+
+<!-- سكشن من نحن -->
+<section id="aboutSection" class="relative py-16 px-8 md:px-16 w-[95%] m-auto overflow-hidden">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- النص -->
+    <div class="text-right space-y-6 opacity-0 translate-y-12 transition-all duration-1000" id="aboutText">
+      <h2 id="aboutTitle" class="text-4xl font-extrabold text-[#285b52] opacity-0 translate-y-6 transition-all duration-700 delay-300">
+        <span class="text-[#9ed2c2]">من </span>نحن!
+      </h2>
+      <p class="text-gray-800 leading-relaxed">
+        شركة <strong>HDC</strong> هي أفضل شركة مقاولات رائدة في قطاع المقاولات في المملكة العربية السعودية، تتمتع بخبرة واسعة وسمعة قوية في تنفيذ المشاريع المعقدة والدقيقة، بما في ذلك الأعمال الكهربائية والميكانيكية. نحن متخصصون في مختلف مجالات المقاولات، حيث نعتمد على خبراتنا العميقة وطواقمنا البشرية المبدعة والقوية، فحققنا نجاحات باهرة وتواصلنا لتحقيق التميز في السوق، مما يضعنا في مكانة تنافسية رائدة.
+      </p>
+      <p class="text-gray-800 leading-relaxed">
+        نحن نولي اهتمامًا بالغًا بإدارة الوقت والموارد المالية والبشرية، ونعمل على ضمان تنفيذ المشاريع وفقًا للخطط الزمنية المحددة، باستخدام أدوات متقدمة ومنهجيات فعالة تتابع العمليات باستمرار وتقوم بتطوير أي مناطق تتطلب تحسينات. نحن نحرص على تخطيط المشاريع بشكل احترافي لضمان التنسيق الكامل بين فرق العمل المختلفة، مما يساهم في تسليم المشاريع بنجاح وفي الوقت المحدد وضمن الميزانية المحددة.
+      </p>
+    </div>
+
+    <!-- الصور -->
+    <div class="relative opacity-0 translate-y-12 transition-all duration-1000 delay-500" id="aboutImage">
+      <!-- الصورة الخلفية الباهتة -->
+      <div class="absolute top-0 left-0 w-full h-full rounded-3xl overflow-hidden opacity-60 scale-95">
+        <img src="https://images.pexels.com/photos/5583959/pexels-photo-5583959.jpeg?auto=compress&cs=tinysrgb&w=800" 
+             alt="Background Construction" 
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- الصورة الأمامية -->
+      <div class="relative rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+        <img src="https://images.pexels.com/photos/5854188/pexels-photo-5854188.jpeg?auto=compress&cs=tinysrgb&w=800" 
+             alt="Main Construction" 
+             class="w-full h-full object-cover">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* الأنيميشن عند الظهور */
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.getElementById("aboutText").classList.add("show");
+        setTimeout(() => document.getElementById("aboutTitle").classList.add("show"), 200);
+        setTimeout(() => document.getElementById("aboutImage").classList.add("show"), 400);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(document.getElementById("aboutSection"));
+});
+</script>
+
+
+</body>
+</html>
+
+
