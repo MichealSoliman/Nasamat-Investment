@@ -1,122 +1,369 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شركة نسمات - سكشن مميزات واتصال</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة نسمات للاستثمار - الشهادات والاعتمادات</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* أنيميشن الظهور */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-  <!-- Cairo Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
 
-  <!-- AOS (Animate on Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        /* تأثيرات Hover */
+        .certificate-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateY(0);
+        }
 
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(40, 91, 82, 0.2);
+        }
 
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-    }
-  </style>
+        /* نموذج عرض الصورة */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            animation: fadeInScale 0.3s ease-out;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            display: block;
+            animation: fadeInScale 0.4s ease-out 0.1s both;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #285b52;
+            transform: scale(1.2);
+        }
+
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #285b52;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .download-btn:hover {
+            background: #1e4a43;
+            transform: scale(1.05);
+        }
+
+        /* أنيميشن التأخير */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
 </head>
-<body class="bg-[#f8f9fa] text-[#111826]">
+<body class="bg-gray-50 overflow-x-hidden">
 
-  <!-- سكشن المميزات -->
-  <section class="py-24 text-right">
-    <div class="container mx-auto px-6">
-
-      <!-- العنوان الرئيسي -->
-      <div class="mb-16 text-center" data-aos="fade-up">
-        <h2 class="text-4xl font-bold mb-4">لماذا نحن الخيار الأفضل لك؟</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">الخبرة والتميّز</p>
-      </div>
-
-      <!-- كروت المميزات -->
-      <div class="grid md:grid-cols-3 gap-6 mb-24">
-        <!-- كرت 1 -->
-        <div class="bg-[#285b52] text-white rounded-xl p-6 shadow-lg" data-aos="fade-left">
-          <h3 class="text-xl font-bold mb-2">جودة عالية ومعايير عالمية</h3>
-          <p class="text-sm opacity-90 leading-relaxed">
-            نحن نلتزم بتقديم خدمات مقاولات وفقًا لأعلى معايير الجودة العالمية، مما يضمن لك تنفيذ مشروع قوي وآمن.
-          </p>
-        </div>
-
-        <!-- كرت 2 -->
-        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-up">
-          <h3 class="text-xl font-bold mb-2">خبرة وكفاءة عالية</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            فريقنا المتخصص يمتلك الإدارة الكاملة لتنفيذ المشاريع بأحدث التقنيات، مما يضمن لك نتائج متميزة.
-          </p>
-        </div>
-
-        <!-- كرت 3 -->
-        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-right">
-          <h3 class="text-xl font-bold mb-2">التزام بالمواعيد والميزانية</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            نحرص على تسليم المشاريع في الوقت المحدد وضمن الميزانية المتفق عليها، مما يوفر لك راحة البال وضمان التنفيذ بكفاءة.
-          </p>
-        </div>
-      </div>
-
-      <!-- سكشن التواصل -->
-      <div class="grid md:grid-cols-2 gap-6 items-stretch">
-        <!-- يسار -->
-        <div class="bg-[#285b52] text-white rounded-2xl p-8 flex items-center" data-aos="fade-left">
-          <div>
-            <p class="mb-2 text-sm text-white/70">اتصل بنا اليوم</p>
-            <h3 class="text-2xl font-bold mb-4 leading-relaxed">
-              تواصل معنا لمناقشة مشروعك، أو طرح الأسئلة، أو جدولة استشارة مع فريقنا.
-            </h3>
-          </div>
-        </div>
-
-        <!-- يمين -->
-        <div class="bg-white rounded-2xl p-8 shadow-md relative overflow-hidden" data-aos="fade-right">
-          <h4 class="text-xl font-bold mb-4">معلومات الاتصال معنا</h4>
-          <p class="text-gray-600 text-sm mb-6">تواصل بشكل مباشر مع فريق العملاء لدينا</p>
-
-          <div class="space-y-4 text-sm">
-            <div class="flex items-center gap-3">
-              <i class="fas fa-map-marker-alt text-[#285b52]"></i>
-              <span>المكتب الرئيسي - جدة، المملكة العربية السعودية</span>
+<!-- قسم الشهادات -->
+<section id="certificates" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        
+        <!-- العنوان الرئيسي -->
+        <div class="text-center mb-16">
+            <div class="animate-on-scroll">
+                <span class="text-[#285b52] font-bold text-lg mb-2 block">الجودة والاعتماد</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">شهاداتنا المعتمدة</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    نفتخر بحصولنا على أعلى الشهادات الدولية في مجال المقاولات والبناء، 
+                    والتي تؤكد التزامنا بمعايير الجودة والسلامة والبيئة العالمية.
+                </p>
             </div>
-            <div class="flex items-center gap-3">
-              <i class="fas fa-envelope text-[#285b52]"></i>
-              <span>info@halaalsharq.com</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fas fa-phone text-[#285b52]"></i>
-              <span>0172834228</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fab fa-whatsapp text-green-600"></i>
-              <a href="https://wa.me/966172834228" target="_blank" class="hover:underline">
-                تواصل واتساب - 0172834228
-              </a>
-            </div>
-          </div>
-
-          <!-- صورة خلفية باهتة -->
-          <img src="./asstes/img/unnamed (2).png"
-               class="absolute inset-0 object-cover opacity-10 pointer-events-none rounded-2xl" alt="" />
         </div>
-      </div>
+
+        <!-- شبكة الشهادات -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- شهادة ISO 9001 -->
+            <div class="animate-on-scroll delay-1 certificate-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-blue-50 to-blue-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-award text-6xl text-blue-600 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-blue-800">ISO 9001:2015</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">نظام إدارة الجودة</h4>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        شهادة نظام إدارة الجودة الدولية التي تؤكد التزامنا بأعلى معايير الجودة في تنفيذ المشاريع.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex justify-between">
+                            <span>رقم الشهادة:</span>
+                            <span class="font-medium">SISTEMA-KSA/NCC-Q20679</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الإصدار:</span>
+                            <span class="font-medium">24.02.2025</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الانتهاء:</span>
+                            <span class="font-medium">23.02.2026</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex gap-3">
+                        <button class="view-certificate flex-1 bg-[#285b52] text-white py-2 px-4 rounded-lg hover:bg-[#1e4a43] transition duration-300"
+                                data-image="./asstes/img/Screenshot_2.png">
+                            <i class="fas fa-eye ml-2"></i>
+                            عرض الشهادة
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- شهادة ISO 14001 -->
+            <div class="animate-on-scroll delay-2 certificate-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-green-50 to-green-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-leaf text-6xl text-green-600 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-green-800">ISO 14001:2015</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">نظام الإدارة البيئية</h4>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        شهادة نظام الإدارة البيئية التي تعكس التزامنا بحماية البيئة والاستدامة في جميع مشاريعنا.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex justify-between">
+                            <span>رقم الشهادة:</span>
+                            <span class="font-medium">SISTEMA-KSA/NCC-E20680</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الإصدار:</span>
+                            <span class="font-medium">24.02.2025</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الانتهاء:</span>
+                            <span class="font-medium">23.02.2026</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex gap-3">
+                        <button class="view-certificate flex-1 bg-[#285b52] text-white py-2 px-4 rounded-lg hover:bg-[#1e4a43] transition duration-300"
+                                data-image="./asstes/img/Screenshot_3.png">
+                            <i class="fas fa-eye ml-2"></i>
+                            عرض الشهادة
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- شهادة ISO 45001 -->
+            <div class="animate-on-scroll delay-3 certificate-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-red-50 to-red-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-6xl text-red-600 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-red-800">ISO 45001:2018</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">نظام الصحة والسلامة المهنية</h4>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        شهادة نظام الصحة والسلامة المهنية التي تضمن بيئة عمل آمنة لموظفينا ومقاولينا.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex justify-between">
+                            <span>رقم الشهادة:</span>
+                            <span class="font-medium">SISTEMA-KSA/NCC-020681</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الإصدار:</span>
+                            <span class="font-medium">24.02.2025</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>تاريخ الانتهاء:</span>
+                            <span class="font-medium">23.02.2026</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex gap-3">
+                        <button class="view-certificate flex-1 bg-[#285b52] text-white py-2 px-4 rounded-lg hover:bg-[#1e4a43] transition duration-300"
+                                data-image="./asstes/img/Screenshot_4.png">
+                            <i class="fas fa-eye ml-2"></i>
+                            عرض الشهادة
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- إحصائيات -->
+        <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div class="animate-on-scroll delay-1 bg-gradient-to-br from-[#285b52] to-[#1e4a43] rounded-2xl p-8 text-white">
+                <div class="text-4xl font-bold mb-2">3</div>
+                <div class="text-gray-200">شهادات دولية</div>
+            </div>
+            <div class="animate-on-scroll delay-2 bg-gradient-to-br from-[#285b52] to-[#1e4a43] rounded-2xl p-8 text-white">
+                <div class="text-4xl font-bold mb-2">50+</div>
+                <div class="text-gray-200">خدمة معتمدة</div>
+            </div>
+            <div class="animate-on-scroll delay-3 bg-gradient-to-br from-[#285b52] to-[#1e4a43] rounded-2xl p-8 text-white">
+                <div class="text-4xl font-bold mb-2">100%</div>
+                <div class="text-gray-200">التزام بالجودة</div>
+            </div>
+            <div class="animate-on-scroll delay-4 bg-gradient-to-br from-[#285b52] to-[#1e4a43] rounded-2xl p-8 text-white">
+                <div class="text-4xl font-bold mb-2">24/7</div>
+                <div class="text-gray-200">مراقبة الجودة</div>
+            </div>
+        </div>
+
     </div>
-  </section>
+</section>
 
-  <!-- تفعيل AOS -->
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
+<!-- نموذج عرض الصورة -->
+<div id="certificateModal" class="modal p-12 pt-24">
+    <span class="close-modal">&times;</span>
+    <div class="download-btn">
+        <i class="fas fa-download ml-2"></i>
+        تحميل
+    </div>
+    <img class="modal-content" id="certificateImage" alt="شهادة معتمدة">
+</div>
+
+<script>
+    // أنيميشن الظهور عند التمرير
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // مراقبة العناصر المتحركة
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // فتح نموذج عرض الشهادة
+        const modal = document.getElementById('certificateModal');
+        const modalImg = document.getElementById('certificateImage');
+        const closeModal = document.querySelector('.close-modal');
+        const downloadBtn = document.querySelector('.download-btn');
+
+        document.querySelectorAll('.view-certificate').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const imageSrc = this.getAttribute('data-image');
+                modal.style.display = 'block';
+                modalImg.src = imageSrc;
+                
+                // تحديث زر التحميل ليناسب الصورة الحالية
+                downloadBtn.onclick = function() {
+                    const link = document.createElement('a');
+                    link.href = imageSrc;
+                    link.download = imageSrc;
+                    link.click();
+                };
+            });
+        });
+
+        // إغلاق النموذج
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // إغلاق النموذج عند النقر خارج الصورة
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // إغلاق النموذج بمفتاح ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+
+        // تأثيرات أزرار التحميل الصغيرة
+        document.querySelectorAll('.download-pdf').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-download"></i>';
+                    }, 2000);
+                }, 1500);
+            });
+        });
     });
-  </script>
-  
+</script>
+
 </body>
 </html>

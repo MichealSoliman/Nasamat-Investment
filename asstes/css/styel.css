@@ -4,7 +4,7 @@ html {
 }
 
   :root {
-    --color-primary: #285b52;
+    --color-primary: #96653f;
     --color-accent: #9ed2c2;
     --color-dark: #111826;
     --color-bg: #f8f9fa;
@@ -300,7 +300,8 @@ html {
         }
 
         .project-overlay {
-            background: linear-gradient(to top, rgba(40, 91, 82, 0.9) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(150, 100, 63, 0.9) 0%, transparent 100%);
+
             opacity: 0;
             transition: all 0.4s ease;
         }
@@ -317,9 +318,9 @@ html {
 
         .filter-btn.active,
         .filter-btn:hover {
-            background: #285b52;
+            background: #96653f;
             color: white;
-            border-color: #285b52;
+            border-color: #96653f;
         }
 
         /* أنيميشن التأخير */
@@ -394,7 +395,7 @@ html {
         
         .newsletter-input:focus {
             background: rgba(255, 255, 255, 0.15);
-            border-color: #285b52;
+            border-color: #96653f;
         }
         
         .footer-link {
@@ -409,7 +410,7 @@ html {
             right: 0;
             width: 0;
             height: 2px;
-            background: #285b52;
+            background: #96653f;
             transition: width 0.3s ease;
         }
         
