@@ -1,5 +1,8 @@
 
-  
+html {
+  scroll-behavior: smooth;
+}
+
   :root {
     --color-primary: #285b52;
     --color-accent: #9ed2c2;
