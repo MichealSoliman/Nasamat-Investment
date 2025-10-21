@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة نسمات - سكشن مميزات واتصال</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Cairo Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f8f9fa] text-[#111826]">
+
+  <!-- سكشن المميزات -->
+  <section class="py-24 text-right">
+    <div class="container mx-auto px-6">
+
+      <!-- العنوان الرئيسي -->
+      <div class="mb-16 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-4">لماذا نحن الخيار الأفضل لك؟</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">الخبرة والتميّز</p>
+      </div>
+
+      <!-- كروت المميزات -->
+      <div class="grid md:grid-cols-3 gap-6 mb-24">
+        <!-- كرت 1 -->
+        <div class="bg-[#285b52] text-white rounded-xl p-6 shadow-lg" data-aos="fade-left">
+          <h3 class="text-xl font-bold mb-2">جودة عالية ومعايير عالمية</h3>
+          <p class="text-sm opacity-90 leading-relaxed">
+            نحن نلتزم بتقديم خدمات مقاولات وفقًا لأعلى معايير الجودة العالمية، مما يضمن لك تنفيذ مشروع قوي وآمن.
+          </p>
+        </div>
+
+        <!-- كرت 2 -->
+        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2">خبرة وكفاءة عالية</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            فريقنا المتخصص يمتلك الإدارة الكاملة لتنفيذ المشاريع بأحدث التقنيات، مما يضمن لك نتائج متميزة.
+          </p>
+        </div>
+
+        <!-- كرت 3 -->
+        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-right">
+          <h3 class="text-xl font-bold mb-2">التزام بالمواعيد والميزانية</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            نحرص على تسليم المشاريع في الوقت المحدد وضمن الميزانية المتفق عليها، مما يوفر لك راحة البال وضمان التنفيذ بكفاءة.
+          </p>
+        </div>
+      </div>
+
+      <!-- سكشن التواصل -->
+      <div class="grid md:grid-cols-2 gap-6 items-stretch">
+        <!-- يسار -->
+        <div class="bg-[#285b52] text-white rounded-2xl p-8 flex items-center" data-aos="fade-left">
+          <div>
+            <p class="mb-2 text-sm text-white/70">اتصل بنا اليوم</p>
+            <h3 class="text-2xl font-bold mb-4 leading-relaxed">
+              تواصل معنا لمناقشة مشروعك، أو طرح الأسئلة، أو جدولة استشارة مع فريقنا.
+            </h3>
+          </div>
+        </div>
+
+        <!-- يمين -->
+        <div class="bg-white rounded-2xl p-8 shadow-md relative overflow-hidden" data-aos="fade-right">
+          <h4 class="text-xl font-bold mb-4">معلومات الاتصال معنا</h4>
+          <p class="text-gray-600 text-sm mb-6">تواصل بشكل مباشر مع فريق العملاء لدينا</p>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-[#285b52]"></i>
+              <span>المكتب الرئيسي - جدة، المملكة العربية السعودية</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-[#285b52]"></i>
+              <span>info@halaalsharq.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-phone text-[#285b52]"></i>
+              <span>0172834228</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-green-600"></i>
+              <a href="https://wa.me/966172834228" target="_blank" class="hover:underline">
+                تواصل واتساب - 0172834228
+              </a>
+            </div>
+          </div>
+
+          <!-- صورة خلفية باهتة -->
+          <img src="./asstes/img/unnamed (2).png"
+               class="absolute inset-0 object-cover opacity-10 pointer-events-none rounded-2xl" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تفعيل AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
+  
+</body>
+</html>

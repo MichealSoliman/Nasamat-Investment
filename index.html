@@ -3,522 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة نسمات للاستثمار - متخصصون في المقاولات والبناء</title>
-    <meta name="description" content="شركة نسمات للاستثمار - رائدة في مجال المقاولات والبناء والتشطيب في المملكة العربية السعودية">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+    <title>نبني المستقبل بخطوات ثابتة</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'amiri': ['Amiri', 'serif'],
-                        'noto': ['Noto Sans Arabic', 'sans-serif'],
-                    },
-                    colors: {
-                        'construction-brown': '#111826',
-                        'construction-gray': '#808080',
-                        'hotels-gold': '#D4AF37',
-                        'hotels-navy': '#001F3F',
-                        'commercial-green': '#228B22',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS (Animate On Scroll) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-    <!-- Swiper.js -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    
+    <link rel="stylesheet" href="./asstes/css/styel.css">
     <style>
-        body {
-            font-family: 'Noto Sans Arabic', sans-serif;
-        }
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
             background-size: cover;
             background-position: center;
         }
-        .service-card:hover {
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
+        
+        .slide.active {
+            opacity: 1;
         }
-        .project-image {
-            transition: transform 0.3s ease;
+        
+        .text-animation {
+            animation: slideInFromRight 1.5s ease-out forwards;
+            opacity: 0;
         }
-        .project-image:hover {
-            transform: scale(1.05);
+        
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
-        .swiper {
-            width: 100%;
-            height: 100%;
+        
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+        .delay-4 { animation-delay: 1.2s; }
+        
+        .content-container {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
         }
-        .swiper-slide {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .testimonial-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        
+        @media (max-width: 768px) {
+            .content-container {
+                background: rgba(0, 0, 0, 0.8);
+            }
         }
     </style>
-        
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-        }
-        
-        .hero-section {
-            background: 
-           url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.3;
-        }
-        
-        .cta-button {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: all 0.6s;
-        }
-        
-        .cta-button:hover::before {
-            right: 100%;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, -10px); }
-            100% { transform: translate(0, 0px); }
-        }
-        
-        .badge {
-            animation: badgePulse 2s infinite;
-        }
-        
-        @keyframes badgePulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-                .primary-color {
-            color: #111826;
-        }
-        
-        .primary-bg {
-            background-color: #111826;
-        }
-        
-        .primary-border {
-            border-color: #111826;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #111826 0%, #1e293b 100%);
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hover-lift {
-            transition: all 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-card {
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 38, 0.15);
-            border-color: #111826;
-        }
-        
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-        }
-        
-        .accent-color {
-            color: #d97706;
-        }
-        
-        .accent-bg {
-            background-color: #d97706;
-        }
-    </style>
-</head>
-<body class="font-noto bg-gray-50">
-   <!-- Header -->
-<header class="fixed w-full bg-white shadow-md z-50">
-  <div class="container mx-auto px-4  flex items-center justify-between">
-    
-    <!-- Logo -->
-    <div class="flex items-center">
-<!-- Logo -->
-<div class="flex items-center">
-  <div class="w-12 h-15  overflow-hidden flex items-center justify-center  ">
-    <img 
-      src="./asstes/img/unnamed.png" 
-      alt="شعار نسمات للاستثمار" 
-      class="w-full h-full object-cover"
-    >
-  </div>
-  <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
-</div>
 
-      
+</head>
+<body>
+        <!-- Header -->
+        
+<header class="fixed w-full bg-white shadow-md z-50">
+
+  <!-- Top Contact + Social (desktop only) -->
+  <div class="bg-[#f5f5f5] text-sm text-gray-700 py-3 px-6 border-b border-gray-200 hidden md:flex justify-around items-center">
+    <div class="flex items-center gap-4 rtl:flex-row-reverse">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-phone-alt text-[#285b52]"></i>
+        <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-envelope text-[#285b52]"></i>
+        <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+      </div>
     </div>
 
-    <!-- Navigation (Centered) -->
+    <div class="flex items-center gap-4 rtl:flex-row">
+      <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/nsmatco" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/nsmat.co/" target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/966172834228"target="_blank" class="text-[#285b52] hover:text-[#1d3c34] transition">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="container mx-auto px-4 py-1 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+      <div class="w-12 h-15 overflow-hidden flex items-center justify-center">
+        <img src="./asstes/img/unnamed (2).png" alt="شعار نسمات للاستثمار" class="w-full h-full object-cover" />
+      </div>
+      <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
+    </div>
+
+    <!-- Navigation (desktop) -->
     <nav class="hidden md:flex flex-1 justify-center space-x-8 space-x-reverse">
       <a href="index.html" class="text-construction-brown hover:text-construction-gray font-medium">الرئيسية</a>
       <a href="hotels.html" class="text-gray-600 hover:text-construction-brown font-medium">الخدمات الفندقية</a>
       <a href="commercial.html" class="text-gray-600 hover:text-construction-brown font-medium">المجال التجاري</a>
     </nav>
 
-    <!-- Call Button -->
+    <!-- Call To Action (desktop) -->
     <div class="hidden md:block">
-      <a href="#contact" class="bg-construction-brown text-white px-4 py-2 rounded-lg hover:bg-construction-gray transition">
+      <a href="#contact" class="border-2 border-[#111826] text-[#111826] hover:bg-[#111826] hover:text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
         اتصل بنا
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="md:hidden text-construction-brown">
-      <i class="fas fa-bars text-xl"></i>
+    <button id="mobile-menu-button" class="md:hidden text-construction-brown text-3xl p-2 focus:outline-none">
+      <i class="fas fa-bars"></i>
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
-    <div class="flex flex-col space-y-4">
-      <a href="index.html" class="text-construction-brown font-medium py-2">الرئيسية</a>
-      <a href="hotels.html" class="text-gray-600 font-medium py-2">الخدمات الفندقية</a>
-      <a href="commercial.html" class="text-gray-600 font-medium py-2">المجال التجاري</a>
-      <a href="#contact" class="text-gray-600 font-medium py-2">اتصل بنا</a>
-    </div>
-  </div>
-</header>
+  <!-- Mobile Sidebar Menu -->
+  <aside
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl rounded-l-3xl transform translate-x-full transition-transform duration-400 ease-in-out z-50 overflow-y-auto"
+    aria-label="Mobile menu"
+  >
+    <div class="flex flex-col h-full p-6">
 
+      <!-- Close Button -->
+      <button
+        id="mobile-menu-close"
+        class="self-start mb-8 text-gray-700 hover:text-[#285b52] text-3xl focus:outline-none"
+        aria-label="Close menu"
+      >
+        <i class="fas fa-times"></i>
+      </button>
 
-    <!-- Hero Section -->
-    <section class="hero-section h-[98vh] flex items-center justify-center text-white overflow-hidden">
-        <!-- Overlay dark + blur -->
-          <div class="absolute inset-0 bg-[#111826]/80 backdrop-blur-sm"></div>
+      <!-- Navigation Links -->
+      <nav class="flex flex-col space-y-6 rtl:text-right">
+        <a href="index.html" class="text-construction-brown font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">الرئيسية</a>
+        <a href="hotels.html" class="text-gray-700 font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">الخدمات الفندقية</a>
+        <a href="commercial.html" class="text-gray-700 font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">المجال التجاري</a>
+        <a href="#contact" class="text-gray-700 font-semibold text-lg hover:text-[#285b52] transition-colors duration-300">اتصل بنا</a>
+      </nav>
 
-        <div class="relative z-10 container mx-auto px-4 text-center">
-            <!-- شارة الشركة -->
-            <div class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-8 badge" data-aos="fade-down">
-                <span class="w-3 h-3 bg-green-400 rounded-full ml-2 animate-pulse"></span>
-                <span class="text-white font-medium">شركة سعودية معتمدة منذ 2005</span>
-            </div>
-            
-            <!-- العنوان الرئيسي -->
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 font-amiri drop-shadow-lg text-shadow" data-aos="fade-up">
-                شركة نسمات للاستثمار
-            </h1>
+      <hr class="my-6 border-gray-300" />
 
-            <!-- العنوان الفرعي -->
-            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed text-shadow" data-aos="fade-up" data-aos-delay="200">
-                خبرة طويلة في مجالات <span class="text-amber-300 font-semibold">المقاولات</span>، 
-                <span class="text-amber-300 font-semibold">الخدمات الفندقية</span>، و
-                <span class="text-amber-300 font-semibold">التجارة العامة</span> — 
-                نُقدّم حلولاً متكاملة من الألف إلى الياء بثقة وجودة عالية.
-            </p>
-
-            <!-- أزرار التواصل -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 mt-5" data-aos="fade-up" data-aos-delay="400">
-                <a 
-                    href="#contact"
-                    class="cta-button bg-[#8B4513] hover:bg-[#A0522D] text-white font-bold py-4 px-12 rounded-xl text-lg transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
-                >
-                    <i class="fas fa-phone-alt text-lg"></i>
-                    اتصل بنا الآن
-                </a>
-
-                <a 
-                    href="https://wa.me/966500000000" 
-                    target="_blank"
-                    class="cta-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3"
-                >
-                    <i class="fab fa-whatsapp text-2xl"></i> 
-                    تواصل عبر واتساب
-                </a>
-            </div>
-
-            <!-- إحصائيات سريعة -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="600">
-                <div class="text-center " >
-                    <div class="text-3xl md:text-4xl font-bold text-amber-300 mb-2">+150</div>
-                    <div class="text-white/90 text-sm md:text-base">مشروع مكتمل</div>
-                </div>
-                
-                <div class="text-center " >
-                    <div class="text-3xl md:text-4xl font-bold text-amber-300 mb-2">18</div>
-                    <div class="text-white/90 text-sm md:text-base">سنة خبرة</div>
-                </div>
-                
-                <div class="text-center " >
-                    <div class="text-3xl md:text-4xl font-bold text-amber-300 mb-2">+50</div>
-                    <div class="text-white/90 text-sm md:text-base">فريق متخصص</div>
-                </div>
-                
-                <div class="text-center " >
-                    <div class="text-3xl md:text-4xl font-bold text-amber-300 mb-2">5</div>
-                    <div class="text-white/90 text-sm md:text-base">مدن سعودية</div>
-                </div>
-            </div>
+      <!-- Contact Info -->
+      <div class="text-gray-700 text-sm space-y-4 rtl:text-right mt-auto">
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-phone-alt text-[#285b52]"></i>
+          <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+        </div>
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-envelope text-[#285b52]"></i>
+          <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
         </div>
 
-        <!-- مؤشر التمرير -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce z-10">
-            <i class="fas fa-chevron-down text-2xl"></i>
+        <!-- Social Icons -->
+        <div class="flex items-center gap-6 mt-4 text-[#285b52] justify-end text-2xl">
+          <a href="https://facebook.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/966172834228"target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</header>
+
+<!-- Overlay for dark background -->
+<div id="mobile-menu-overlay" class=""></div>
+
+<!-- end header  -->
+
+
+<!-- start hero section -->
+    <section class="hero-section relative bg-gray-900 text-white min-h-[800px] flex items-center overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+        <!-- خلفية الصور المتحركة -->
+        <div class="absolute inset-0 overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2069&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=2074&q=80');"></div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1974&q=80');"></div>
+            
+            <!-- تأثير الضباب العام -->
+            <div class="fog-overlay"></div>
+            
+            <!-- تأثير الضباب على منطقة المحتوى -->
+            <div class="content-fog"></div>
+        </div>
+
+        <!-- المحتوى -->
+        <div class="relative z-10 w-full flex justify-start">
+            <div class="content-container w-full md:w-2/3 lg:w-1/2 min-h-[800px] flex items-center py-12 pr-8 md:pr-16 lg:pr-[200px] pl-4 md:pl-16">
+                <div class="hero-content w-full">
+                    <div class="mb-3 text-animation">
+                        <h2 class="text-2xl font-bold text-[#285b52]">شركة نسمات للاستثمار</h2>
+                    </div>
+                    <h1 class="hero-title text-5xl font-bold mb-6 text-animation delay-1">نبني المستقبل بخطوات ثابتة مضمونة</h1>
+                    <p class="hero-subtitle text-2xl mb-12 text-gray-300 text-animation delay-1">بخبرة ومعرفة ورؤية واضحة</p>
+
+                    <div class="hero-description bg-gradient-to-l from-[#285b52]/80 to-transparent rounded-lg border-r-4 border-[#285b52] mb-10 text-animation delay-2">
+                        <p class="text-xl font-medium text-white">
+                            خبرة طويلة في مجالات 
+                            <span class="text-amber-300 font-semibold">المقاولات</span>، 
+                            <span class="text-amber-300 font-semibold">الخدمات الفندقية</span>، و
+                            <span class="text-amber-300 font-semibold">التجارة العامة</span> — 
+                            نُقدّم حلولاً متكاملة من الألف إلى الياء بثقة وجودة عالية.
+                        </p>
+                    </div>
+
+                    <div class="mb-12 text-animation delay-3">
+                        <button class="hero-button border border-[#285b52] hover:bg-[#285b52] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                            اكتشف المزيد
+                        </button>
+                    </div>
+
+                    <!-- نقاط التنقل -->
+                    <div class="indicators-container flex justify-start mt-12 space-x-4 rtl:space-x-reverse">
+                        <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300" data-slide="0"></button>
+                        <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300" data-slide="1"></button>
+                        <button class="slide-indicator w-4 h-4 rounded-full bg-white bg-opacity-50 focus:outline-none transition-all duration-300" data-slide="2"></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-  
-  
+    
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // تهيئة AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-        
+<section id="cards-banner" class="cards-section relative bg-[#285b52] text-white py-12 -mt-24 rounded-[3rem] z-20 w-[75%] m-auto overflow-hidden opacity-0 translate-y-[80px] transition-all duration-1000">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-stretch text-center gap-6">
+    
+    <!-- كارت 1 - من اليمين -->
+    <div class="card card-item flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 translate-x-[80px] transition-all duration-1000">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-calendar-check"></i></div>
+      <h3 class="font-bold text-lg mb-2">التزام بالمواعيد والميزانية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">نحرص على تسليم المشاريع في الوقت المحدد وضمن الميزانية المتفق عليها</p>
+    </div>
 
-            
+    <!-- كارت 2 - من فوق -->
+    <div class="card card-item flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 -translate-y-[80px] transition-all duration-1000 delay-200">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-handshake"></i></div>
+      <h3 class="font-bold text-lg mb-2">خبرة وكفاءة عالية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">فريقنا المتخصص يمتلك الخبرة الكافية لتنفيذ المشاريع بأحدث التقنيات</p>
+    </div>
 
-    </script>
+    <!-- كارت 3 - من اليسار -->
+    <div class="card card-item flex-1 bg-[#285b52] rounded-2xl p-8 shadow-md opacity-0 -translate-x-[80px] transition-all duration-1000 delay-400">
+      <div class="text-4xl text-[#9ed2c2] mb-4"><i class="fas fa-gem"></i></div>
+      <h3 class="font-bold text-lg mb-2">جودة عالية ومعايير عالمية</h3>
+      <p class="text-gray-200 text-sm leading-relaxed">نلتزم بتقديم خدمات وفق أعلى معايير الجودة العالمية</p>
+    </div>
+    
+  </div>
+</section>
 
-<div class="container w-75 m-auto">
-    <!-- About Section - Redesigned -->
-    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div class="container mx-auto px-6 md:px-12 lg:px-16">
-            <!-- Section Header -->
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="inline-block px-4 py-2 bg-[#111826] text-white rounded-full text-sm font-semibold mb-4 shadow-lg">
-                    من نحن
-                </span>
-                <h2 class="text-4xl md:text-5xl font-bold primary-color mb-4 font-amiri">
-                    نسمات للاستثمار
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                    شريكك المثالي في تحويل الأحلام إلى واقع ملموس من خلال خدماتنا المتكاملة
-                </p>
+
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+
+
+<!-- end section hero -->
+
+<!-- About Section مع ألوان وأنيميشن موحدة -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="container mx-auto px-6 md:px-12 lg:px-16">
+    <!-- Section Header -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <span class="inline-block px-4 py-2 bg-[#111826] text-white rounded-full text-sm font-semibold mb-4 shadow-lg">
+        من نحن
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold primary-color mb-4 font-amiri">
+        نسمات للاستثمار
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        شريكك المثالي في تحويل الأحلام إلى واقع ملموس من خلال خدماتنا المتكاملة
+      </p>
+    </div>
+
+    <!-- Main Content - Image Left, Content Right -->
+    <div class="bg-white rounded-3xl p-8 md:p-12 mb-16 overflow-hidden" data-aos="fade-up">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Right Side - Content -->
+        <div class="pr-0 md:pr-6" data-aos="fade-left">
+          <h3 class="text-4xl font-bold primary-color mb-8 font-amiri relative inline-block">
+            لماذا نسمات للاستثمار؟
+            <span class="absolute -bottom-2 right-0 w-24 h-1 accent-bg rounded-full"></span>
+          </h3>
+
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            نحن شركة سعودية رائدة في تقديم حلول متكاملة في 
+            <span class="font-semibold primary-color">المجالات الفندقية</span>، 
+            <span class="font-semibold primary-color">التجارية</span>، و
+            <span class="font-semibold primary-color">المقاولات</span>. 
+            نجمع بين الخبرة الواسعة والابتكار لنقدم مشاريع استثنائية تتجاوز توقعات عملائنا.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed mb-8">
+            نلتزم بأعلى معايير الجودة والسلامة، مع فريق محترف من المهندسين والفنيين بخبرة عميقة في السوق السعودي.
+          </p>
+
+          <!-- Features List -->
+          <ul class="space-y-5 mb-10">
+            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50 transition">
+              <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold primary-color">حلول متكاملة</h4>
+                <p class="text-gray-600 text-sm">نقدم خدمات متكاملة تشمل التصميم، التنفيذ، والإدارة بجودة عالية.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50 transition">
+              <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
+                <i class="fas fa-hard-hat"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold primary-color">فريق هندسي محترف</h4>
+                <p class="text-gray-600 text-sm">نمتلك كفاءات عالية من المهندسين والفنيين لضمان تنفيذ المشاريع بدقة.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50 transition">
+              <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold primary-color">جودة معتمدة</h4>
+                <p class="text-gray-600 text-sm">نلتزم بالمعايير الدولية في الجودة والسلامة لضمان رضا العملاء.</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg_gray-50 transition">
+              <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold primary-color">ابتكار في الحلول</h4>
+                <p class="text-gray-600 text-sm">نواكب التطورات في التصميم والبناء لتحقيق أفضل النتائج بأقل التكاليف.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact"
+               class="primary-bg hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-phone"></i>
+              اتصل بنا
+            </a>
+            <a href="https://wa.me/966172834228"target="_blank"
+               class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            >
+              <i class="fab fa-whatsapp"></i>
+              تواصل واتساب
+            </a>
+          </div>
+        </div>
+
+        <!-- Left Side - Image -->
+        <div class="relative" data-aos="fade-right">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="./asstes/img/unnamed (2).png"
+                 alt="نسمات للاستثمار"
+                 class="w-full h-[500px] object-contain">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111826]/40 to-transparent"></div>
+          </div>
+
+          <!-- Floating Experience Card -->
+          <div class="absolute -bottom-6 -right-6 primary-bg text-white px-6 py-5 rounded-xl shadow-2xl">
+            <div class="text-4xl font-bold font-amiri">+15</div>
+            <div class="text-sm opacity-90">سنة من الخبرة</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="py-16">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span class="inline-block px-4 py-2 bg-[#111826] text-white rounded-full text-sm font-semibold mb-4 shadow-lg">
+          خدماتنا
+        </span>
+        <h2 class="text-4xl font-bold primary-color mb-4 font-amiri">
+          مجالات عمل شركة نسمات للاستثمار
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          نقدم مجموعة متكاملة من الخدمات الاستثمارية التي تلبي جميع احتياجاتك
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- هنا تدخل كروت الخدمات كما هو في كودك الأصلي -->
+        <!-- مثال واحد: -->
+        <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                 alt="الخدمات الفندقية"
+                 class="w-full h-56 object-cover transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111826]/60 to-transparent"></div>
+            <div class="absolute bottom-4 right-4 text-white text-3xl">
+              <i class="fas fa-hotel"></i>
             </div>
-
-            <!-- Main Content - Image Left, Content Right -->
-            <div class="bg-white rounded-3xl  p-8 md:p-12 mb-16 overflow-hidden" data-aos="fade-up">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-
-
-                      <!-- Right Side - Content -->
-                    <div class="pr-0 md:pr-6" data-aos="fade-left">
-                        <h3 class="text-4xl font-bold primary-color mb-8 font-amiri relative inline-block">
-                            لماذا نسمات للاستثمار؟
-                            <span class="absolute -bottom-2 right-0 w-24 h-1 accent-bg rounded-full"></span>
-                        </h3>
-
-                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                            نحن شركة سعودية رائدة في تقديم حلول متكاملة في 
-                            <span class="font-semibold primary-color">المجالات الفندقية</span>، 
-                            <span class="font-semibold primary-color">التجارية</span>، و
-                            <span class="font-semibold primary-color">المقاولات</span>. 
-                            نجمع بين الخبرة الواسعة والابتكار لنقدّم مشاريع استثنائية تتجاوز توقعات عملائنا.
-                        </p>
-                        <p class="text-gray-700 text-lg leading-relaxed mb-8">
-                            نلتزم بأعلى معايير الجودة والسلامة، مع فريق محترف من المهندسين والفنيين بخبرة عميقة في السوق السعودي.
-                        </p>
-
-                        <!-- Features List -->
-                        <ul class="space-y-5 mb-10">
-                            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50">
-                                <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold primary-color">حلول متكاملة</h4>
-                                    <p class="text-gray-600 text-sm">نقدّم خدمات متكاملة تشمل التصميم، التنفيذ، والإدارة بجودة عالية.</p>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50">
-                                <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
-                                    <i class="fas fa-hard-hat"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold primary-color">فريق هندسي محترف</h4>
-                                    <p class="text-gray-600 text-sm">نمتلك كفاءات عالية من المهندسين والفنيين لضمان تنفيذ المشاريع بدقة.</p>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50">
-                                <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
-                                    <i class="fas fa-certificate"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold primary-color">جودة معتمدة</h4>
-                                    <p class="text-gray-600 text-sm">نلتزم بالمعايير الدولية في الجودة والسلامة لضمان رضا العملاء.</p>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start gap-4 hover-lift p-3 rounded-lg hover:bg-gray-50">
-                                <div class="accent-color text-2xl mt-1 bg-orange-50 p-2 rounded-lg">
-                                    <i class="fas fa-lightbulb"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold primary-color">ابتكار في الحلول</h4>
-                                    <p class="text-gray-600 text-sm">نواكب التطورات في التصميم والبناء لتحقيق أفضل النتائج بأقل التكاليف.</p>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <!-- Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#contact" class="primary-bg hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                                <i class="fas fa-phone"></i> 
-                                اتصل بنا
-                            </a>
-                            <a href="https://wa.me/966500000000" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                                <i class="fab fa-whatsapp"></i> 
-                                تواصل واتساب
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Left Side - Image -->
-                    <div class="relative" data-aos="fade-right">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-                            <img 
-                                src="./asstes/img/unnamed.png" 
-                                alt="نسمات للاستثمار" 
-                                class="w-full h-[500px] object-contain">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#111826]/40 to-transparent"></div>
-                        </div>
-
-                        <!-- Floating Experience Card -->
-                        <div class="absolute -bottom-6 -right-6 primary-bg text-white px-6 py-5 rounded-xl shadow-2xl">
-                            <div class="text-4xl font-bold font-amiri">+15</div>
-                            <div class="text-sm opacity-90">سنة من الخبرة</div>
-                        </div>
-                    </div>
-
-                  
-                </div>
+            <div class="absolute top-4 left-4">
+              <span class="bg-white/90 text-[#111826] px-3 py-1 rounded-full text-sm font-semibold">
+                فندقي
+              </span>
             </div>
+          </div>
 
-            <!-- Services Section -->
-            <div class="py-16">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="inline-block px-4 py-2 bg-[#111826] text-white rounded-full text-sm font-semibold mb-4 shadow-lg">
-                        خدماتنا
-                    </span>
-                    <h2 class="text-4xl font-bold primary-color mb-4 font-amiri">
-                        مجالات عمل شركة نسمات للاستثمار
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        نقدم مجموعة متكاملة من الخدمات الاستثمارية التي تلبي جميع احتياجاتك
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Hotel Services Card -->
-                    <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                                alt="الخدمات الفندقية" 
-                                class="w-full h-56 object-cover transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#111826]/60 to-transparent"></div>
-                            <div class="absolute bottom-4 right-4 text-white text-3xl">
-                                <i class="fas fa-hotel"></i>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-white/90 text-[#111826] px-3 py-1 rounded-full text-sm font-semibold">
-                                    فندقي
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="p-6 text-right">
-                            <h3 class="text-2xl font-bold primary-color mb-3 font-amiri">الخدمات الفندقية</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                تصميم وتشغيل الفنادق والمنتجعات بمعايير فندقية عالمية تشمل الضيافة، الصيانة، والإدارة.
-                            </p>
-                            <a href="hotels.html" 
-                                class="inline-flex items-center gap-2 primary-border border-2 primary-color hover:primary-bg hover:text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
-                                <span>المزيد</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Commercial Services Card -->
+          <div class="p-6 text-right">
+            <h3 class="text-2xl font-bold primary-color mb-3 font-amiri">الخدمات الفندقية</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              تصميم وتشغيل الفنادق والمنتجعات بمعايير فندقية عالمية تشمل الضيافة، الصيانة، والإدارة.
+            </p>
+            <a href="hotels.html"
+               class="inline-flex items-center gap-2 primary-border border-2 primary-color hover:primary-bg hover:text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
+              <span>المزيد</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+                            <!-- Commercial Services Card -->
                     <div class="service-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="200">
                         <div class="relative overflow-hidden">
                             <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
@@ -570,397 +495,556 @@
                             <p class="text-gray-600 mb-4 leading-relaxed">
                                 تنفيذ المشاريع الإنشائية من الألف إلى الياء مع الالتزام التام بمعايير الجودة والأمان.
                             </p>
-                            <a href="contracting.html" 
+                            <a href="./index1.html" 
                                 class="inline-flex items-center gap-2 primary-border border-2 primary-color hover:primary-bg hover:text-white font-bold py-2 px-6 rounded-lg transition-all duration-300">
                                 <span>المزيد</span>
                                 <i class="fas fa-arrow-left"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
+      </div>
+    </div>
 
-            <!-- Bottom Features -->
-            <div class="grid md:grid-cols-4 gap-6 mt-16">
-                <div class="feature-card text-center p-6 bg-white rounded-xl shadow-sm" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-14 h-14 primary-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                        <i class="fas fa-thumbs-up text-xl"></i>
-                    </div>
-                    <h4 class="font-bold primary-color mb-2 font-amiri">ضمان الجودة</h4>
-                    <p class="text-sm text-gray-500">أعلى معايير الجودة في التنفيذ</p>
-                </div>
-
-                <div class="feature-card text-center p-6 bg-white rounded-xl shadow-sm" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-14 h-14 primary-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                        <i class="fas fa-handshake text-xl"></i>
-                    </div>
-                    <h4 class="font-bold primary-color mb-2 font-amiri">الالتزام بالمواعيد</h4>
-                    <p class="text-sm text-gray-500">تسليم المشاريع في الوقت المحدد</p>
-                </div>
-
-                <div class="feature-card text-center p-6 bg-white rounded-xl shadow-sm" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-14 h-14 primary-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                        <i class="fas fa-lightbulb text-xl"></i>
-                    </div>
-                    <h4 class="font-bold primary-color mb-2 font-amiri">حلول مبتكرة</h4>
-                    <p class="text-sm text-gray-500">تصاميم عصرية ومبتكرة</p>
-                </div>
-
-                <div class="feature-card text-center p-6 bg-white rounded-xl shadow-sm" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="w-14 h-14 primary-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                        <i class="fas fa-shield-alt text-xl"></i>
-                    </div>
-                    <h4 class="font-bold primary-color mb-2 font-amiri">السلامة أولاً</h4>
-                    <p class="text-sm text-gray-500">التزام صارم بمعايير السلامة</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // تهيئة AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-        
-        // تأثيرات تفاعلية إضافية
-        document.addEventListener('DOMContentLoaded', function() {
-            // تأثير التمرير السلس
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+  </div>
+</section>
 
 
 
-    <!-- Services Section -->
-    <section class="py-16 bg-gray-100 w-75 m-auto">
+    <!-- قسم مشاريعنا -->
+    <section id="projects" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-construction-brown mb-4 font-amiri" data-aos="fade-down">خدماتنا</h2>
-            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12 text-lg" data-aos="fade-up">نقدم مجموعة متكاملة من خدمات البناء والتشطيب لتلبية جميع احتياجاتكم</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white rounded-lg shadow-md p-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
-                        <i class="fas fa-drafting-compass"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-construction-brown mb-3 text-center font-amiri">التصميم والتخطيط</h3>
-                    <p class="text-gray-700 text-center">
-                        نقدم خدمات التصميم المعماري والهندسي المتكامل، مع مراعاة أحدث المعايير والمواصفات لضمان تحقيق رؤية العملاء.
-                    </p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-lg shadow-md p-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-construction-brown mb-3 text-center font-amiri">أعمال البناء</h3>
-                    <p class="text-gray-700 text-center">
-                        تنفيذ مشاريع البناء بجودة عالية وفقاً للمواصفات القياسية والجداول الزمنية المتفق عليها.
-                    </p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-lg shadow-md p-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-2xl mb-4 mx-auto">
-                        <i class="fas fa-paint-roller"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-construction-brown mb-3 text-center font-amiri">أعمال التشطيب</h3>
-                    <p class="text-gray-700 text-center">
-                        تشطيب داخلي وخارجي متكامل بأفضل المواد وأحدث التقنيات لتحقيق نتائج استثنائية.
+            <!-- العنوان الرئيسي -->
+            <div class="text-center mb-16">
+                <div class="section-title">
+                    <span class="text-[#285b52] font-bold text-lg mb-2 block">إنجازاتنا</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">مشاريعنا الرائدة</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        نفتخر بتنفيذ مشاريع استثنائية تجمع بين الإبداع والجودة في مختلف المجالات
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Gallery -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-construction-brown mb-4 font-amiri" data-aos="fade-down">مشاريعنا</h2>
-            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12 text-lg" data-aos="fade-up">نفخر بتنفيذ العديد من المشاريع الناجحة التي تعكس خبرتنا وجودة عملنا</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="project-image overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                         alt="مشروع سكني فاخر" 
-                         class="w-full h-64 object-cover">
-                    <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-construction-brown mb-2 font-amiri">مجمع سكني فاخر</h3>
-                        <p class="text-gray-700">تنفيذ مجمع سكني متكامل في الرياض يشمل 40 فيلا بتصاميم حديثة.</p>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-image overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                         alt="مشروع تجاري" 
-                         class="w-full h-64 object-cover">
-                    <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-construction-brown mb-2 font-amiri">مركز تجاري حديث</h3>
-                        <p class="text-gray-700">بناء مركز تجاري متكامل في جدة بمساحة 15,000 متر مربع.</p>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-image overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" 
-                         alt="مشروع مكتبي" 
-                         class="w-full h-64 object-cover">
-                    <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-construction-brown mb-2 font-amiri">مبنى مكاتب متطور</h3>
-                        <p class="text-gray-700">تصميم وتنفيذ مبنى مكاتب ذكي في الدمام بتقنيات البناء الحديثة.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <button class="bg-construction-brown hover:bg-construction-gray text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
-                    عرض جميع المشاريع
+            <!-- أزرار التصفية -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-3 rounded-full bg-[#285b52] text-white font-medium" data-filter="all">
+                    جميع المشاريع
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-[#285b52] hover:text-white" data-filter="construction">
+                    <i class="fas fa-building ml-2"></i>
+                    المقاولات
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-[#285b52] hover:text-white" data-filter="commercial">
+                    <i class="fas fa-store ml-2"></i>
+                    التجارية
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-[#285b52] hover:text-white" data-filter="hotel">
+                    <i class="fas fa-hotel ml-2"></i>
+                    الفندقية
                 </button>
             </div>
+
+            <!-- شبكة المشاريع -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- مشروع مقاولات 1 -->
+                <div class="project-card delay-1 project-item construction" data-category="construction">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" 
+                                alt="برج سكني فاخر"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-[#285b52] px-3 py-1 rounded-full text-sm font-medium">مقاولات</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">برج سكني فاخر</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                برج سكني يتكون من 30 طابقاً بتصميم عصري ومرافق متكاملة في قلب الرياض
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">25 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">12 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع فندقي 1 -->
+                <div class="project-card delay-2 project-item hotel" data-category="hotel">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" 
+                                alt="فندق نسمات الفاخر"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-amber-500 px-3 py-1 rounded-full text-sm font-medium">فندقي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">فندق نسمات الفاخر</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                فندق 5 نجوم يضم 200 غرفة ومجموعة من المطاعم العالمية ومركز مؤتمرات
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">80 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">24 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع تجاري 1 -->
+                <div class="project-card delay-3 project-item commercial" data-category="commercial">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" 
+                                alt="مجمع تجاري حديث"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-blue-500 px-3 py-1 rounded-full text-sm font-medium">تجاري</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">مجمع تجاري حديث</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                مجمع تجاري متكامل يضم 150 محلاً تجارياً ومواقف سيارات تحت الأرض
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">45 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">18 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع مقاولات 2 -->
+                <div class="project-card delay-4 project-item construction" data-category="construction">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" 
+                                alt="فيلات سكنية"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-[#285b52] px-3 py-1 rounded-full text-sm font-medium">مقاولات</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">مجمع فيلات سكنية</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                مجموعة من 25 فيلا فاخرة بتصاميم معاصرة ومساحات خضراء واسعة
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">35 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">15 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع فندقي 2 -->
+                <div class="project-card delay-5 project-item hotel" data-category="hotel">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80" 
+                                alt="منتجع سياحي"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-amber-500 px-3 py-1 rounded-full text-sm font-medium">فندقي</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">منتجع سياحي فاخر</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                منتجع على البحر يضم 120 فيلا وشاليه ومرافق ترفيهية متكاملة
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">60 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">20 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع تجاري 2 -->
+                <div class="project-card delay-1 project-item commercial" data-category="commercial">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <div class="relative overflow-hidden h-64">
+                            <img 
+                                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" 
+                                alt="مكتبة تجارية"
+                                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                            >
+                            <div class="project-overlay absolute inset-0 flex items-end p-6">
+                                <div class="text-white">
+                                    <span class="bg-blue-500 px-3 py-1 rounded-full text-sm font-medium">تجاري</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">برج مكاتب تجارية</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                برج مكاتب حديث يقدم مساحات عمل متطورة لرواد الأعمال والشركات
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-[#285b52] font-bold">55 مليون ريال</span>
+                                <span class="text-gray-500 text-sm">22 شهراً</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-construction-brown mb-4 font-amiri" data-aos="fade-down">آراء عملائنا</h2>
-            <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12 text-lg" data-aos="fade-up">ثقة عملائنا هي شهادتنا الحقيقية على جودة خدماتنا</p>
-            
-            <!-- Swiper -->
-            <div class="swiper mySwiper" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <!-- Testimonial 1 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card max-w-2xl mx-auto">
-                            <div class="flex items-center mb-4">
-                                <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-xl font-bold ml-4">
-                                    أ
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">أحمد السديري</h4>
-                                    <p class="text-gray-600">مالك مشروع سكني</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 text-lg italic">
-                                "تعاملت مع شركة نسمات للاستثمار في بناء فيلا سكنية، وأعجبت جداً بالاحترافية العالية والالتزام بالجودة والمواعيد. أنصح بالتعامل معهم لكل من يبحث عن الجودة والاحترافية."
-                            </p>
-                            <div class="mt-4 text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+      <!-- سكشن المميزات -->
+  <section class="py-24 text-right">
+    <div class="container mx-auto px-6">
+
+      <!-- العنوان الرئيسي -->
+      <div class="mb-16 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-4">لماذا نحن الخيار الأفضل لك؟</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">الخبرة والتميّز</p>
+      </div>
+
+      <!-- كروت المميزات -->
+      <div class="grid md:grid-cols-3 gap-6 mb-24">
+        <!-- كرت 1 -->
+        <div class="bg-[#285b52] text-white rounded-xl p-6 shadow-lg" data-aos="fade-left">
+          <h3 class="text-xl font-bold mb-2">جودة عالية ومعايير عالمية</h3>
+          <p class="text-sm opacity-90 leading-relaxed">
+            نحن نلتزم بتقديم خدمات مقاولات وفقًا لأعلى معايير الجودة العالمية، مما يضمن لك تنفيذ مشروع قوي وآمن.
+          </p>
+        </div>
+
+        <!-- كرت 2 -->
+        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2">خبرة وكفاءة عالية</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            فريقنا المتخصص يمتلك الإدارة الكاملة لتنفيذ المشاريع بأحدث التقنيات، مما يضمن لك نتائج متميزة.
+          </p>
+        </div>
+
+        <!-- كرت 3 -->
+        <div class="bg-white text-[#111826] rounded-xl p-6 shadow-lg" data-aos="fade-right">
+          <h3 class="text-xl font-bold mb-2">التزام بالمواعيد والميزانية</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            نحرص على تسليم المشاريع في الوقت المحدد وضمن الميزانية المتفق عليها، مما يوفر لك راحة البال وضمان التنفيذ بكفاءة.
+          </p>
+        </div>
+      </div>
+
+      <!-- سكشن التواصل -->
+      <div class="grid md:grid-cols-2 gap-6 items-stretch">
+        <!-- يسار -->
+        <div class="bg-[#285b52] text-white rounded-2xl p-8 flex items-center" data-aos="fade-left">
+          <div>
+            <p class="mb-2 text-sm text-white/70">اتصل بنا اليوم</p>
+            <h3 class="text-2xl font-bold mb-4 leading-relaxed">
+              تواصل معنا لمناقشة مشروعك، أو طرح الأسئلة، أو جدولة استشارة مع فريقنا.
+            </h3>
+          </div>
+        </div>
+
+        <!-- يمين -->
+        <div class="bg-white rounded-2xl p-8 shadow-md relative overflow-hidden" data-aos="fade-right">
+          <h4 class="text-xl font-bold mb-4">معلومات الاتصال معنا</h4>
+          <p class="text-gray-600 text-sm mb-6">تواصل بشكل مباشر مع فريق العملاء لدينا</p>
+
+          <div class="space-y-4 text-sm">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-[#285b52]"></i>
+              <span>المكتب الرئيسي - جدة، المملكة العربية السعودية</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-[#285b52]"></i>
+              <span>info@halaalsharq.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-phone text-[#285b52]"></i>
+              <span>0172834228</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-green-600"></i>
+              <a href="https://wa.me/966172834228" target="_blank" class="hover:underline">
+                تواصل واتساب - 0172834228
+              </a>
+            </div>
+          </div>
+
+          <!-- صورة خلفية باهتة -->
+          <img src="./asstes/img/unnamed (2).png"
+               class="absolute inset-0 object-cover opacity-10 pointer-events-none rounded-2xl" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تفعيل AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
+
+   
+
+<!-- تضمين مكتبة AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+  });
+</script>
+
+
+   <!-- Footer -->
+    <footer class="footer-gradient text-white relative overflow-hidden">
+        <!-- الأشكال العائمة -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="floating-shape shape-1 absolute top-10 left-10 w-20 h-20 bg-[#285b52] opacity-10 rounded-full"></div>
+            <div class="floating-shape shape-2 absolute top-1/4 right-20 w-16 h-16 bg-[#285b52] opacity-10 rounded-lg"></div>
+            <div class="floating-shape shape-3 absolute bottom-20 left-1/4 w-24 h-24 bg-[#285b52] opacity-10 rounded-full"></div>
+        </div>
+        
+        <!-- قسم النشرة البريدية -->
+        <div class="relative z-10 border-b border-gray-700">
+            <div class="container mx-auto px-4 py-12">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">انضم إلى قائمة بريدنا الإلكتروني</h2>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">اشترك في نشرتنا البريدية لتصلك آخر أخبار الشركة وعروضنا الحصرية مباشرة إلى بريدك الإلكتروني</p>
                     
-                    <!-- Testimonial 2 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card max-w-2xl mx-auto">
-                            <div class="flex items-center mb-4">
-                                <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-xl font-bold ml-4">
-                                    م
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">محمد القحطاني</h4>
-                                    <p class="text-gray-600">مدير شركة تجارية</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 text-lg italic">
-                                "نفذت لنا شركة نسمات للاستثمار مبنى المكاتب الجديد لشركتنا، وكان الأداء متميزاً من التصميم حتى التسليم. فريق العمل محترف ومتفاني في عمله."
-                            </p>
-                            <div class="mt-4 text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial-card max-w-2xl mx-auto">
-                            <div class="flex items-center mb-4">
-                                <div class="w-16 h-16 bg-construction-brown rounded-full flex items-center justify-center text-white text-xl font-bold ml-4">
-                                    ف
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800">فهد الحربي</h4>
-                                    <p class="text-gray-600">مستثمر عقاري</p>
-                                </div>
-                            </div>
-                            <p class="text-gray-700 text-lg italic">
-                                "تعاونت مع نسمات للاستثمار في عدة مشاريع سكنية، وأثبتوا كفاءة عالية في الإدارة والتنفيذ. أسعارهم منافسة وجودة عملهم تستحق الثناء."
-                            </p>
-                            <div class="mt-4 text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
+                    <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                        <input 
+                            type="email" 
+                            placeholder="بريدك الإلكتروني" 
+                            class="newsletter-input flex-1 px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#285b52]"
+                        >
+                        <button class="bg-[#285b52] hover:bg-[#1e4a43] text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+                            اشترك الآن
+                        </button>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
-
-
-</div>
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div>
-                    <div class="flex items-center mb-4">
-                          <div class="w-12 h-15  overflow-hidden flex items-center justify-center  ">
-    <img 
-      src="./asstes/img/unnamed.png" 
-      alt="شعار نسمات للاستثمار" 
-      class="w-full h-full object-cover"
-    >
-  </div>
-                        <h3 class="text-xl font-bold font-amiri">نسمات للاستثمار</h3>
-                    </div>
-                    <p class="text-gray-300 mb-4">
-                        شركة رائدة في مجال الاستثمار والبناء في المملكة العربية السعودية، نقدم حلولاً متكاملة في المقاولات والخدمات الفندقية والاستثمار التجاري.
-                    </p>
-                    <div class="flex space-x-3 space-x-reverse">
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-construction-brown transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-construction-brown transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-construction-brown transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-construction-brown transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 font-amiri">روابط سريعة</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">الرئيسية</a></li>
-                        <li><a href="hotels.html" class="text-gray-300 hover:text-white transition duration-300">الخدمات الفندقية</a></li>
-                        <li><a href="commercial.html" class="text-gray-300 hover:text-white transition duration-300">المجال التجاري</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 font-amiri">خدماتنا</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">المقاولات والبناء</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">التصميم والتخطيط</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">أعمال التشطيب</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">إدارة المشاريع</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 font-amiri">معلومات الاتصال</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-gray-400 ml-2 mt-1"></i>
-                            <p class="text-gray-300">المملكة العربية السعودية - الرياض</p>
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="relative z-10 py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <!-- معلومات الشركة -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-20 overflow-hidden flex items-center justify-center ml-4">
+                                <img src="./asstes/img/unnamed (2).png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">نسمات للاستثمار</h3>
+                                <p class="text-[#285b52] font-medium">بناء المستقبل بثقة</p>
+                            </div>
                         </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-phone text-gray-400 ml-2 mt-1"></i>
-                            <p class="text-gray-300">+966 11 123 4567</p>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            شركة رائدة في مجال الاستثمار والبناء في المملكة العربية السعودية، نقدم حلولاً متكاملة في المقاولات والخدمات الفندقية والاستثمار التجاري. نلتزم بمعايير الجودة العالمية ونحرص على تقديم أفضل الخدمات لعملائنا الكرام.
+                        </p>
+                        
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://x.com/nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#285b52] transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#285b52] transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nsmat.co/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#285b52] transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                           
+                            <a href="https://www.tiktok.com/@nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#285b52] transition duration-300">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-envelope text-gray-400 ml-2 mt-1"></i>
-                            <p class="text-gray-300">info@nesmat-invest.com</p>
+                    </div>
+                    
+                    <!-- روابط سريعة -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#285b52] inline-block">روابط سريعة</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="index.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#285b52] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    الرئيسية
+                                </a>
+                            </li>
+                            <li>
+                                <a href="hotels.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#285b52] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    الخدمات الفندقية
+                                </a>
+                            </li>
+                            <li>
+                                <a href="commercial.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#285b52] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    المجال التجاري
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#285b52] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    عن الشركة
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#285b52] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- خدماتنا -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#285b52] inline-block">خدماتنا</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-building text-[#285b52] ml-2"></i>
+                                    المقاولات والبناء
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-drafting-compass text-[#285b52] ml-2"></i>
+                                    التصميم والتخطيط
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-paint-roller text-[#285b52] ml-2"></i>
+                                    أعمال التشطيب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-tasks text-[#285b52] ml-2"></i>
+                                    إدارة المشاريع
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-hotel text-[#285b52] ml-2"></i>
+                                    الاستثمار الفندقي
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- معلومات الاتصال -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#285b52] inline-block">معلومات الاتصال</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#285b52] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">العنوان</h4>
+                                    <p class="text-gray-300 text-sm">المملكة العربية السعودية - خميس مشيط    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#285b52] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">الهاتف</h4>
+                                    <p class="text-gray-300 text-sm">966172834228+</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#285b52] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">البريد الإلكتروني</h4>
+                                    <p class="text-gray-300 text-sm">nsmat.ncc@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#285b52] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">أوقات العمل</h4>
+                                    <p class="text-gray-300 text-sm">الأحد - الخميس: 8 ص - 5 م</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">© 2023 شركة نسمات للاستثمار. جميع الحقوق محفوظة.</p>
+        </div>
+        
+        <!-- القسم السفلي -->
+        <div class="relative z-10 border-t border-gray-700 py-8 bg-gray-900 bg-opacity-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-right mb-4 md:mb-0">
+                        <p class="text-gray-400">
+                            © 2024 شركة نسمات للاستثمار. جميع الحقوق محفوظة.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الخصوصية</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">شروط الاستخدام</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الاسترجاع</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">الأسئلة الشائعة</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-        
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Initialize Swiper
-        const swiper = new Swiper('.mySwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-        });
-        
-        // Contact Form Validation
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                alert('شكراً لتواصلكم معنا! سنرد على رسالتكم في أقرب وقت ممكن.');
-                this.reset();
-            } else {
-                alert('يرجى ملء جميع الحقول المطلوبة.');
-            }
-        });
-    </script>
+
+
+
+<script src="./asstes/js/script.js"></script>
 </body>
 </html>
+
+
