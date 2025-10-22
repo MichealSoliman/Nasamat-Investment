@@ -205,14 +205,16 @@
             </p>
           </div>
 
-          <!-- الزر -->
-          <div class="mb-12 text-animation delay-3">
-            <button
-              class="hero-button border-2 border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-10 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2">
-              <i class="fas fa-hotel text-amber-300"></i>
-              اكتشف خدماتنا الفندقية
-            </button>
-          </div>
+        <!-- الزر -->
+<div class="mb-12 text-animation delay-3">
+  <button
+    class="hero-button border border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2"
+    onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">
+     <i class="fas fa-hotel text-amber-300"></i>
+     اكتشف خدماتنا الفندقية
+  </button>
+</div>
+
 
 
 
@@ -455,7 +457,7 @@
   </section>
 
    <!-- قسم الخدمات -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="container">
             <h2 class="section-title">خدماتنا المتكاملة</h2>
             <p class="section-subtitle">نقدم مجموعة شاملة من الخدمات الفندقية والإدارية لتلبية جميع احتياجاتك</p>
