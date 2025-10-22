@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نبني المستقبل بخطوات ثابتة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../asstes/css/styel.css">
+     <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .text-animation {
+            animation: slideInFromRight 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .delay-3 { animation-delay: 0.9s; }
+        .delay-4 { animation-delay: 1.2s; }
+        
+        .content-container {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#96653f',
+                        'primary-light': '#b08c6d',
+                        'primary-dark': '#7a5232',
+                        accent: '#d4a574',
+                        gold: '#d4af37',
+                        'text-dark': '#333333',
+                        'text-light': '#666666',
+                        'bg-light': '#f8f5f2',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'elegant': '0 10px 40px rgba(150, 101, 63, 0.15)',
+                        'card': '0 8px 30px rgba(0, 0, 0, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-border {
+            background: linear-gradient(135deg, #96653f, #d4af37);
+            padding: 2px;
+            border-radius: 16px;
+        }
+        
+        .service-card-inner {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .floating-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .floating-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .icon-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .icon-hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+       <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f5f2 0%, #ffffff 50%, #f8f5f2 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, #ffffff 0%, #fcfaf8 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(150, 101, 63, 0.2);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+        }
+        
+        .icon-wrapper {
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, #96653f, #d4af37);
+        }
+        
+        .feature-card:hover .icon-wrapper i {
+            color: white;
+        }
+        
+        .stat-number {
+            background: linear-gradient(135deg, #96653f, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #96653f, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+        <!-- Header -->
+        
+<header class="fixed w-full bg-white shadow-md z-50">
+
+  <!-- Top Contact + Social (desktop only) -->
+  <div class="bg-[#f5f5f5] text-sm text-gray-700 py-3 px-6 border-b border-gray-200 hidden md:flex justify-around items-center">
+    <div class="flex items-center gap-4 rtl:flex-row-reverse">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-phone-alt text-[#96653f]"></i>
+        <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-envelope text-[#96653f]"></i>
+        <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4 rtl:flex-row">
+      <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/nsmatco" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/nsmat.co/" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/966172233888"target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="container mx-auto px-4 py-1 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center">
+      <div class="w-12 h-15 overflow-hidden flex items-center justify-center">
+        <img src="../asstes/img/unnamed (2).png" alt="شعار نسمات للاستثمار" class="w-full h-full object-cover" />
+      </div>
+      <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
+    </div>
+
+    <!-- Navigation (desktop) -->
+    <nav class="hidden md:flex flex-1 justify-center space-x-8 space-x-reverse">
+      <a href="index.html" class="text-construction-brown hover:text-[#96653f] font-medium">الرئيسية</a>
+      <a href="./categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">خدمات المقاولات  </a>
+      <a href="hotels.html" class="text-gray-600 hover:text-[#96653f] font-medium">الخدمات الفندقية</a>
+      <a href="commercial.html" class="text-gray-600 hover:text-[#96653f] font-medium">المجال التجاري</a>
+    </nav>
+
+    <!-- Call To Action (desktop) -->
+    <div class="hidden md:block">
+      <a href="#contact" class="border-2 border-[#96653f] text-[#96653f] hover:bg-[#96653f] hover:text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+        اتصل بنا
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden text-construction-brown text-3xl p-2 focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Sidebar Menu -->
+  <aside
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl rounded-l-3xl transform translate-x-full transition-transform duration-400 ease-in-out z-50 overflow-y-auto"
+    aria-label="Mobile menu"
+  >
+    <div class="flex flex-col h-full p-6">
+
+      <!-- Close Button -->
+      <button
+        id="mobile-menu-close"
+        class="self-start mb-8 text-gray-700 hover:text-[#96653f] text-3xl focus:outline-none"
+        aria-label="Close menu"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="flex flex-col space-y-6 rtl:text-right">
+        <a href="index.html" class="text-construction-brown font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">الرئيسية</a>
+       <a href="./categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">الخدمات العقارية </a>
+
+        <a href="hotels.html" class="text-gray-700 font-semibold text-lg hover:text-[#96653f] transition-colors duration-300"> خدمات المقاولات</a>
+        <a href="commercial.html" class="text-gray-700 font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">المجال التجاري</a>
+        <a href="#contact" class="text-gray-700 font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">اتصل بنا</a>
+      </nav>
+
+      <hr class="my-6 border-gray-300" />
+
+      <!-- Contact Info -->
+      <div class="text-gray-700 text-sm space-y-4 rtl:text-right mt-auto">
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-phone-alt text-[#96653f]"></i>
+          <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+        </div>
+        <div class="flex items-center gap-3 justify-end">
+          <i class="fas fa-envelope text-[#96653f]"></i>
+          <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex items-center gap-6 mt-4 text-[#96653f] justify-end text-2xl">
+          <a href="https://facebook.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/966172233888"target="_blank" class="hover:text-[#1d3c34] transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+</header>
+
+<!-- Overlay for dark background -->
+<div id="mobile-menu-overlay" class=""></div>
+
+<!-- end header  -->
+
+
+<!-- start hero section -->
+    <section class="hero-section relative bg-gray-900 text-white min-h-[800px] flex items-center overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+        <!-- خلفية الصور المتحركة -->
+        <div class="absolute inset-0 overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+            
+            <div class="slide" style="background-image: url('../asstes/img/commercial-services.jpg');"></div>
+            
+            <!-- تأثير الضباب العام -->
+            <div class="fog-overlay"></div>
+            
+            <!-- تأثير الضباب على منطقة المحتوى -->
+            <div class="content-fog"></div>
+        </div>
+
+<!-- المحتوى (قسم التجارة العامة) -->
+<div class="relative z-10 w-full flex justify-start pt-5">
+  <div class="content-container w-full md:w-2/3 lg:w-1/2 min-h-[800px] flex items-center py-12 pr-8 md:pr-16 lg:pr-[200px] pl-4 md:pl-16">
+    <div class="hero-content w-full">
+      
+      <!-- العنوان الفرعي -->
+      <div class="mb-3 text-animation">
+        <h2 class="text-2xl font-bold text-[#96653f]">نسمات للتجارة العامة</h2>
+      </div>
+
+      <!-- العنوان الرئيسي -->
+      <h1 class="hero-title text-5xl font-bold mb-6 text-animation delay-1">
+        نوفر حلولاً تجارية شاملة بمعايير الجودة والثقة
+      </h1>
+
+      <!-- الوصف القصير -->
+      <p class="hero-subtitle text-2xl mb-12 text-gray-300 text-animation delay-1">
+        نلتزم بتوريد المواد والمستلزمات بأعلى جودة وأفضل الأسعار
+      </p>
+
+      <!-- الوصف داخل صندوق التدرج -->
+      <div class="hero-description bg-gradient-to-l p-3 from-[#96653f]/80 to-transparent rounded-lg border-r-4 border-[#96653f] mb-10 text-animation delay-2">
+        <p class="text-xl font-medium text-white">
+          يُعنى قسم <span class="text-amber-300 font-semibold">التجارة العامة</span> 
+          بتوريد مختلف المواد والمستلزمات للمشاريع والشركات  
+          <br>
+          
+        </p>
+      </div>
+
+      <!-- الزر -->
+      <div class="mb-12 text-animation delay-3">
+        <button
+          class="hero-button border border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2">
+          <i class="fas fa-store text-amber-300"></i>
+          اكتشف خدماتنا التجارية
+        </button>
+      </div>
+
+    
+    </div>
+  </div>
+</div>
+
+    </section>
+
+<!-- end section hero -->
+
+
+
+ <!-- لماذا نحن الخيار المفضل -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <div class="text-center mb-16" data-aos="fade-down">
+                <p class="text-sm md:text-base text-primary font-semibold tracking-widest uppercase mb-4">التميز في التجارة</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
+                    لماذا نحن <span class="gradient-text">الخيار المفضل</span>
+                </h1>
+                <p class="text-xl text-text-light max-w-3xl mx-auto leading-relaxed">
+                    نقدم حلولاً تجارية متكاملة تجمع بين الجودة والكفاءة والابتكار لتلبية جميع احتياجاتك
+                </p>
+                <div class="w-32 h-1.5 bg-gradient-to-l from-primary to-gold mx-auto rounded-full mt-8"></div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <!-- Features List -->
+                <div class="space-y-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card rounded-2xl p-6 border border-gray-100" data-aos="fade-right" data-aos-delay="100">
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrapper w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary text-2xl">
+                                <i class="fas fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-3">توصيل سريع وموثوق</h3>
+                                <p class="text-text-light leading-relaxed">
+                                    شبكة توزيع واسعة تضمن وصول منتجاتك في الوقت المحدد وبأعلى معايير الجودة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card rounded-2xl p-6 border border-gray-100" data-aos="fade-right" data-aos-delay="200">
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrapper w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary text-2xl">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-3">شراكات استراتيجية</h3>
+                                <p class="text-text-light leading-relaxed">
+                                    تعاون مع أكبر الموردين العالميين لتقديم أفضل المنتجات بأسعار تنافسية
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card rounded-2xl p-6 border border-gray-100" data-aos="fade-right" data-aos-delay="300">
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrapper w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary text-2xl">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary mb-3">دعم فني متكامل</h3>
+                                <p class="text-text-light leading-relaxed">
+                                    فريق دعم فني متخصص على مدار الساعة لحل جميع استفساراتك وتقديم الاستشارات
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Image -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                    <div class="rounded-3xl overflow-hidden shadow-elegant floating">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&q=80" 
+                             alt="فريق العمل التجاري" 
+                             class="w-full h-96 object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-elegant" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-gold rounded-xl flex items-center justify-center text-white text-xl">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">جائزة التميز</h4>
+                                <p class="text-sm text-text-light">أفضل مورد 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <!-- Additional Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 4 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">ضمان الجودة</h3>
+                    <p class="text-text-light">
+                        نضمن جودة جميع منتجاتنا بشهادات معتمدة ومواصفات قياسية عالمية
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-rotate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">مرونة في التعامل</h3>
+                    <p class="text-text-light">
+                        حلول تمويلية مرنة وتسهيلات في الدفع تناسب جميع احتياجاتك
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center text-white text-2xl mx-auto mb-6 pulse-glow">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">حلول مبتكرة</h3>
+                    <p class="text-text-light">
+                        نطور حلولاً مبتكرة تلبي متطلبات السوق المتغيرة وتواكب التطورات
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16" data-aos="zoom-in" data-aos-delay="500">
+                <div class="bg-gradient-to-l from-primary to-primary-dark rounded-2xl p-12 text-white shadow-elegant">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">انضم إلى عملائنا المميزين</h2>
+                    <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                        ابدأ رحلتك معنا اليوم وتمتع بأفضل الحلول التجارية التي تلبي جميع متطلباتك
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-300">
+                            اطلب عرض سعر الآن
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-primary transition-all duration-300">
+                            تواصل معنا
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            anchorPlacement: 'top-bottom'
+        });
+    </script>
+   
+
+
+
+    <div class="max-w-7xl mx-auto py-[50px]">
+        <!-- Header Section -->
+        <div class="text-center mb-16" data-aos="fade-down" data-aos-duration="1200">
+            <p class="text-sm md:text-base text-text-light tracking-widest uppercase mb-4">خدماتنا</p>
+           <h1 class="text-3xl md:text-5xl font-bold text-center m-auto text-primary mb-6 leading-tight">
+  نقدم حلولاً متكاملة في<br>الخدمات التجارية والتوريد
+</h1>
+            <div class="w-24 h-1 bg-gradient-to-l from-primary to-gold mx-auto rounded-full"></div>
+        </div>
+
+      <!-- Services Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+
+<!-- 1 - توريد مستلزمات السباكة -->
+<article class="bg-white rounded-2xl shadow overflow-hidden flex flex-col group relative"
+         data-aos="fade-up" data-aos-duration="1000">
+  <div class="relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1603791452906-9c3c9d0d1d4d?w=900&h=700&fit=crop&q=80"
+         alt="توريد مستلزمات السباكة"
+         class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+  </div>
+  <div class="p-6 flex-1 flex flex-col transition-all duration-300 group-hover:-translate-y-1">
+    <h3 class="text-xl font-bold text-[#96653f] mb-2">توريد مستلزمات السباكة</h3>
+    <p class="text-gray-600 flex-1">
+      نوفر جميع مستلزمات السباكة من أنابيب، وصلات، محابس، ولوازم المياه بأعلى جودة ومن أفضل العلامات التجارية.
+    </p>
+    <div class="mt-4 flex gap-3">
+      <a href="tel:0548041579"
+         class="flex-1 text-center px-4 py-2 rounded-md border border-[#96653f] text-[#96653f] text-sm font-medium hover:bg-[#96653f]/10 transition">
+        <i class="fa-solid fa-phone"></i> اتصال
+      </a>
+      <a href="https://wa.me/966172233888" target="_blank"
+         class="flex-1 inline-flex items-center justify-center gap-2 bg-[#96653f] text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">
+        <i class="fa-brands fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</article>
+
+
+<!-- 2 - توريد المستلزمات الكهربائية -->
+<article class="bg-white rounded-2xl shadow overflow-hidden flex flex-col group relative"
+         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+  <div class="relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b7a3b94?w=900&h=700&fit=crop&q=80"
+         alt="توريد المستلزمات الكهربائية"
+         class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+  </div>
+  <div class="p-6 flex-1 flex flex-col transition-all duration-300 group-hover:-translate-y-1">
+    <h3 class="text-xl font-bold text-[#96653f] mb-2">توريد المستلزمات الكهربائية</h3>
+    <p class="text-gray-600 flex-1">
+      نوفر جميع المواد والمستلزمات الكهربائية للمشاريع السكنية والتجارية، 
+      من كابلات، مفاتيح، لمبات، ولوحات توزيع بجودة عالية ومعايير أمان عالمية.
+    </p>
+    <div class="mt-4 flex gap-3">
+      <a href="tel:0548041579"
+         class="flex-1 text-center px-4 py-2 rounded-md border border-[#96653f] text-[#96653f] text-sm font-medium hover:bg-[#96653f]/10 transition">
+        <i class="fa-solid fa-phone"></i> اتصال
+      </a>
+      <a href="https://wa.me/966172233888" target="_blank"
+         class="flex-1 inline-flex items-center justify-center gap-2 bg-[#96653f] text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">
+        <i class="fa-brands fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</article>
+
+
+ <!-- 3 - توريد المواد الصناعية والإنشائية -->
+<article class="bg-white rounded-2xl shadow overflow-hidden flex flex-col group relative"
+         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+  <div class="relative overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1600373158961-1962d9e8a4c4?w=900&h=700&fit=crop&q=80"
+         alt="توريد المواد الصناعية والإنشائية"
+         class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+  </div>
+  <div class="p-6 flex-1 flex flex-col transition-all duration-300 group-hover:-translate-y-1">
+    <h3 class="text-xl font-bold text-[#96653f] mb-2">توريد المواد الصناعية والإنشائية</h3>
+    <p class="text-gray-600 flex-1">
+      نوفر جميع أنواع <span class="font-semibold">المواد الصناعية</span> و
+      <span class="font-semibold">مستلزمات البناء والإنشاء</span> بجودة عالية 
+      ومعايير معتمدة لتلبية احتياجات المشاريع الكبرى والبنية التحتية.
+    </p>
+    <div class="mt-4 flex gap-3">
+      <a href="tel:0548041579"
+         class="flex-1 text-center px-4 py-2 rounded-md border border-[#96653f] text-[#96653f] text-sm font-medium hover:bg-[#96653f]/10 transition">
+        <i class="fa-solid fa-phone"></i> اتصال
+      </a>
+      <a href="https://wa.me/966172233888" target="_blank"
+         class="flex-1 inline-flex items-center justify-center gap-2 bg-[#96653f] text-white px-4 py-2 rounded-lg shadow hover:opacity-90 transition">
+        <i class="fa-brands fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</article>
+
+
+</div>
+
+
+        <!-- Vision Section -->
+        <div class="max-w-4xl mx-auto" 
+             data-aos="zoom-in" 
+             data-aos-duration="1200" 
+             data-aos-delay="500">
+            <div class="gradient-border rounded-2xl">
+                <div class="bg-white rounded-2xl p-8 text-center floating-card hover:shadow-elegant">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">رؤيتنا</h2>
+                    <p class="text-lg md:text-xl text-text-light leading-relaxed max-w-3xl mx-auto">
+                        أن نكون من الشركات الرائدة في مجالات المقاولات، والفندقة، والتجارة، من خلال الالتزام بالجودة، والمصداقية، والتميز في تقديم الخدمات.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+ 
+    </div>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            anchorPlacement: 'top-bottom'
+        });
+
+        // Add scroll refresh for AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    AOS.refresh();
+                }, 50);
+            });
+        });
+    </script>
+
+
+<!-- سكشن مميزاتنا في مجال التجارة -->
+<section id="why-us" class="relative bg-white py-24 overflow-hidden">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+    
+    <!-- العنوان الرئيسي -->
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h3 class="text-[#96653f] text-lg font-semibold mb-2">الثقة والخبرة التجارية</h3>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900">لماذا نُعد شريكك التجاري الأفضل؟</h2>
+    </div>
+
+    <!-- الوصف -->
+    <p class="text-center text-gray-600 text-lg mb-14 max-w-4xl mx-auto" data-aos="fade-up">
+      لأننا في <span class="font-semibold text-[#96653f]">شركة نسمات للاستثمار</span> نمتلك خبرة واسعة في مجال التجارة العامة 
+      وتوريد المستلزمات الصناعية والإنشائية والسباكة والكهرباء.  
+      نضمن لعملائنا الجودة العالية، الأسعار التنافسية، وسرعة الإنجاز في التوريد، 
+      مما يجعلنا الخيار الأمثل لشركتك أو مشروعك التجاري.
+    </p>
+
+    <!-- كروت المميزات -->
+    <div class="grid md:grid-cols-3 gap-8 text-right">
+      <!-- بطاقة 1 -->
+      <div class="bg-[#96653f] text-white p-8 rounded-2xl shadow-xl" data-aos="fade-right">
+        <h3 class="text-2xl font-bold mb-3">منتجات عالية الجودة</h3>
+        <p class="text-gray-100 leading-relaxed">
+          نعمل مع أفضل الموردين لضمان توريد مستلزمات ومعدات أصلية ومعتمدة، 
+          تلبي أعلى معايير الجودة والأداء في السوق.
+        </p>
+      </div>
+
+      <!-- بطاقة 2 -->
+      <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg" data-aos="fade-up">
+        <h3 class="text-2xl font-bold mb-3 text-[#96653f]">تنوع وتكامل في التوريد</h3>
+        <p class="text-gray-600 leading-relaxed">
+          نقدم حلول توريد شاملة تغطي جميع احتياجات المشاريع من سباكة، كهرباء، أدوات صناعية، ومواد إنشائية تحت سقف واحد.
+        </p>
+      </div>
+
+      <!-- بطاقة 3 -->
+      <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg" data-aos="fade-left">
+        <h3 class="text-2xl font-bold mb-3 text-[#96653f]">سرعة تنفيذ والتزام بالمواعيد</h3>
+        <p class="text-gray-600 leading-relaxed">
+          نحرص على تلبية طلبات العملاء بسرعة ودقة عالية، 
+          مع التزام تام بمواعيد التسليم وجدول التوريد المتفق عليه.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- سكشن التواصل -->
+  <div class="container mx-auto px-6 md:px-12 lg:px-20 mt-24 grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- التواصل -->
+    <div class="bg-[#96653f] text-white p-10 rounded-2xl shadow-xl" data-aos="fade-right">
+      <h4 class="text-gray-300 text-sm mb-2">تواصل معنا الآن</h4>
+      <h2 class="text-3xl font-bold mb-4 leading-snug">
+        هل تبحث عن مورد موثوق؟  
+        تواصل معنا لمناقشة احتياجاتك التجارية أو لتوريد منتجات لمشاريعك القادمة.
+      </h2>
+    </div>
+
+    <!-- معلومات الاتصال -->
+    <div class="relative overflow-hidden rounded-2xl shadow-xl" data-aos="fade-left">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80" 
+           alt="تواصل معنا" class="absolute inset-0 w-full h-full object-cover opacity-20">
+      <div class="relative bg-[#96653f]/90 text-white p-10 rounded-2xl h-full flex flex-col justify-center">
+        <h3 class="text-2xl font-bold mb-6">معلومات التواصل</h3>
+        <ul class="space-y-4 text-lg">
+          <li class="flex items-center gap-3">
+            <i class="fas fa-map-marker-alt text-amber-300 text-xl"></i>
+            المكتب الرئيسي: جدة – المملكة العربية السعودية
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-amber-300 text-xl"></i>
+            البريد الإلكتروني: info@halalasherq.com
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-phone text-amber-300 text-xl"></i>
+            رقم الجوال: +966567777034
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- مكتبة AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 120,
+  });
+</script>
+
+   
+
+
+
+   <!-- Footer -->
+    <footer class="footer-gradient text-white relative overflow-hidden">
+        <!-- الأشكال العائمة -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="floating-shape shape-1 absolute top-10 left-10 w-20 h-20 bg-[#96653f] opacity-10 rounded-full"></div>
+            <div class="floating-shape shape-2 absolute top-1/4 right-20 w-16 h-16 bg-[#96653f] opacity-10 rounded-lg"></div>
+            <div class="floating-shape shape-3 absolute bottom-20 left-1/4 w-24 h-24 bg-[#96653f] opacity-10 rounded-full"></div>
+        </div>
+        
+        <!-- قسم النشرة البريدية -->
+        <div class="relative z-10 border-b border-gray-700">
+            <div class="container mx-auto px-4 py-12">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">انضم إلى قائمة بريدنا الإلكتروني</h2>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">اشترك في نشرتنا البريدية لتصلك آخر أخبار الشركة وعروضنا الحصرية مباشرة إلى بريدك الإلكتروني</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+                        <input 
+                            type="email" 
+                            placeholder="بريدك الإلكتروني" 
+                            class="newsletter-input flex-1 px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#96653f]"
+                        >
+                        <button class="bg-[#96653f] hover:bg-[#1e4a43] text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+                            اشترك الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="relative z-10 py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <!-- معلومات الشركة -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-20 overflow-hidden flex items-center justify-center ml-4">
+                                <img src="../asstes/img/unnamed (2).png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">نسمات للاستثمار</h3>
+                                <p class="text-[#96653f] font-medium">بناء المستقبل بثقة</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 mb-6 leading-relaxed">
+                            شركة رائدة في مجال الاستثمار والبناء في المملكة العربية السعودية، نقدم حلولاً متكاملة في المقاولات والخدمات الفندقية والاستثمار التجاري. نلتزم بمعايير الجودة العالمية ونحرص على تقديم أفضل الخدمات لعملائنا الكرام.
+                        </p>
+                        
+                        <div class="flex space-x-3 space-x-reverse">
+                            <a href="https://x.com/nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/nsmat.co/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                           
+                            <a href="https://www.tiktok.com/@nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- روابط سريعة -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">روابط سريعة</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="index.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    الرئيسية
+                                </a>
+                            </li>
+                            <li>
+                                <a href="hotels.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    الخدمات الفندقية
+                                </a>
+                            </li>
+                            <li>
+                                <a href="commercial.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    المجال التجاري
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    عن الشركة
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- خدماتنا -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">خدماتنا</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-building text-[#96653f] ml-2"></i>
+                                    المقاولات والبناء
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-drafting-compass text-[#96653f] ml-2"></i>
+                                    التصميم والتخطيط
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-paint-roller text-[#96653f] ml-2"></i>
+                                    أعمال التشطيب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-tasks text-[#96653f] ml-2"></i>
+                                    إدارة المشاريع
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                                    <i class="fas fa-hotel text-[#96653f] ml-2"></i>
+                                    الاستثمار الفندقي
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- معلومات الاتصال -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">معلومات الاتصال</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">العنوان</h4>
+                                    <p class="text-gray-300 text-sm">المملكة العربية السعودية - خميس مشيط    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">الهاتف</h4>
+                                    <p class="text-gray-300 text-sm">966172834228+</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">البريد الإلكتروني</h4>
+                                    <p class="text-gray-300 text-sm">nsmat.ncc@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">أوقات العمل</h4>
+                                    <p class="text-gray-300 text-sm">الأحد - الخميس: 8 ص - 5 م</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- القسم السفلي -->
+        <div class="relative z-10 border-t border-gray-700 py-8 bg-gray-900 bg-opacity-50">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-right mb-4 md:mb-0">
+                        <p class="text-gray-400">
+                            © 2024 شركة نسمات للاستثمار. جميع الحقوق محفوظة.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الخصوصية</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">شروط الاستخدام</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الاسترجاع</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">الأسئلة الشائعة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+ <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50,
+            anchorPlacement: 'top-bottom'
+        });
+
+        // Add scroll refresh for AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    AOS.refresh();
+                }, 50);
+            });
+        });
+    </script>
+
+
+<script src="../asstes/js/script.js"></script>
+</body>
+</html>
+
+
