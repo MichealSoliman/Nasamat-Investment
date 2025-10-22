@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نسمات للاستثمار - خدمات الفندقية</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../asstes/css/styel.css">
-    <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>نسمات للاستثمار - خدمات الفندقية</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Tajawal:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../asstes/css/styel.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     body {
@@ -25,466 +28,485 @@
       background-color: #faf9f7;
       color: #1f1f1f;
     }
+
     .text-gold {
       color: #96653f;
     }
+
     .bg-gold {
       background-color: #96653f;
     }
+
     .gradient-overlay {
-      background: linear-gradient(to left, rgba(150,101,63,0.8), rgba(0,0,0,0.4));
+      background: linear-gradient(to left, rgba(150, 101, 63, 0.8), rgba(0, 0, 0, 0.4));
     }
+
     .section-title {
       @apply text-4xl font-bold mb-6 text-center;
     }
   </style>
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-        }
-        
-        .primary-color {
-            color: #96653f;
-        }
-        
-        .primary-bg {
-            background-color: #96653f;
-        }
-        
-        .primary-border {
-            border-color: #96653f;
-        }
-        
-        .accent-color {
-            color: #d97706;
-        }
-        
-        .accent-bg {
-            background-color: #96643f;
-        }
-        
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid #e2e8f0;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(17, 24, 38, 0.15);
-            border-color: #d97706;
-        }
-        
-        .certificate-card {
-            transition: all 0.3s ease;
-        }
-        
-        .certificate-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-       .hero-section {
-  background: linear-gradient(135deg, rgba(17, 24, 38, 0.9) 0%, rgba(150, 100, 63, 0.8) 100%), 
-              url('../asstes/img/hotel-services.jpg') 
-              center/cover no-repeat;
-}
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+    }
 
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, -10px); }
-            100% { transform: translate(0, 0px); }
-        }
-    </style>
-      
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-        }
-        
-        .primary-color {
-            color: #96653f;
-        }
-        
-        .primary-bg {
-            background-color: #96653f;
-        }
-        
-        .accent-color {
-            color: #d97706;
-        }
-        
-        .accent-bg {
-            background-color: #d97706;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #96653f 0%, #96653f 100%);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, -10px); }
-            100% { transform: translate(0, 0px); }
-        }
-        
-        .feature-card {
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(17, 24, 38, 0.15);
-            border-color: #96653f;
-        }
-        
-        .progress-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            right: -12px;
-            top: 0;
-            width: 24px;
-            height: 24px;
-            background: #d97706;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 0 0 3px #d97706;
-        }
-    </style>
+    .primary-color {
+      color: #96653f;
+    }
+
+    .primary-bg {
+      background-color: #96653f;
+    }
+
+    .primary-border {
+      border-color: #96653f;
+    }
+
+    .accent-color {
+      color: #d97706;
+    }
+
+    .accent-bg {
+      background-color: #96643f;
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid #e2e8f0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(17, 24, 38, 0.15);
+      border-color: #d97706;
+    }
+
+    .certificate-card {
+      transition: all 0.3s ease;
+    }
+
+    .certificate-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, rgba(17, 24, 38, 0.9) 0%, rgba(150, 100, 63, 0.8) 100%),
+        url('../asstes/img/hotel-services.jpg') center/cover no-repeat;
+    }
+
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+
+      50% {
+        transform: translate(0, -10px);
+      }
+
+      100% {
+        transform: translate(0, 0px);
+      }
+    }
+  </style>
+
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .primary-color {
+      color: #96653f;
+    }
+
+    .primary-bg {
+      background-color: #96653f;
+    }
+
+    .accent-color {
+      color: #d97706;
+    }
+
+    .accent-bg {
+      background-color: #d97706;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #96653f 0%, #96653f 100%);
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+
+      50% {
+        transform: translate(0, -10px);
+      }
+
+      100% {
+        transform: translate(0, 0px);
+      }
+    }
+
+    .feature-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(17, 24, 38, 0.15);
+      border-color: #96653f;
+    }
+
+    .progress-bar {
+      transition: width 1.5s ease-in-out;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      right: -12px;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      background: #d97706;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 3px #d97706;
+    }
+  </style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    :root {
+      --primary-color: #96653f;
+      --primary-light: #b08c6d;
+      --primary-dark: #7a5232;
+      --accent-color: #d4a574;
+      --text-dark: #333333;
+      --text-light: #666666;
+      --background-light: #f8f5f2;
+      --white: #ffffff;
+    }
+
+    body {
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* قسم من نحن */
+    .about-section {
+      padding: 80px 0;
+      background-color: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* المحتوى على اليسار */
+    .about-content {
+      padding-left: 0;
+    }
+
+    @media (min-width: 992px) {
+      .about-content {
+        padding-left: 40px;
+      }
+    }
+
+    .about-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .about-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* إحصائيات سريعة */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 15px;
+      background: var(--background-light);
+      border-radius: 12px;
+      border-right: 4px solid var(--primary-color);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-text {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* سلايدر الصور على اليمين */
+    .slider-section {
+      position: relative;
+    }
+
+    .slider-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      height: 500px;
+    }
+
+    .slider {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      color: var(--white);
+      padding: 30px;
+      transform: translateY(20px);
+      transition: transform 0.5s ease;
+    }
+
+    .slide.active .slide-overlay {
+      transform: translateY(0);
+    }
+
+    .slide-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .slide-desc {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* عناصر التحكم في السلايدر */
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .slider-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: var(--white);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .slider-btn:hover {
+      background: var(--primary-dark);
+      transform: scale(1.1);
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--text-light);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--primary-color);
+      transform: scale(1.2);
+    }
+
+    /* ميزات الخدمات */
+    .services-features {
+      margin-top: 40px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      background: var(--background-light);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      background: var(--primary-color);
+      color: var(--white);
+      transform: translateY(-5px);
+    }
+
+    .feature-item:hover .feature-icon {
+      background: var(--white);
+      color: var(--primary-color);
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary-color);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .feature-text {
+      font-weight:bold;
+      padding-top: 13px;
+    }
+
+    /* تأثيرات الظهور */
+    [data-aos] {
+      opacity: 0;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    [data-aos="fade-up"] {
+      transform: translateY(30px);
+    }
+
+    [data-aos="fade-left"] {
+      transform: translateX(30px);
+    }
+
+    [data-aos="fade-right"] {
+      transform: translateX(-30px);
+    }
+
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    @media (max-width: 768px) {
+      .about-title {
+        font-size: 2.2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slider-container {
+        height: 400px;
+      }
+    }
+  </style>
      <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        :root {
-            --primary-color: #96653f;
-            --primary-light: #b08c6d;
-            --primary-dark: #7a5232;
-            --accent-color: #d4a574;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --background-light: #f8f5f2;
-            --white: #ffffff;
-        }
-
-        body {
-            background-color: var(--background-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* قسم من نحن */
-        .about-section {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        @media (min-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        /* المحتوى على اليسار */
-        .about-content {
-            padding-left: 0;
-        }
-
-        @media (min-width: 992px) {
-            .about-content {
-                padding-left: 40px;
-            }
-        }
-
-        .about-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .about-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            right: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 2px;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            line-height: 1.8;
-            margin-bottom: 25px;
-        }
-
-        .highlight {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        /* إحصائيات سريعة */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px 15px;
-            background: var(--background-light);
-            border-radius: 12px;
-            border-right: 4px solid var(--primary-color);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .stat-text {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        /* سلايدر الصور على اليمين */
-        .slider-section {
-            position: relative;
-        }
-
-        .slider-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            height: 500px;
-        }
-
-        .slider {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide-overlay {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: var(--white);
-            padding: 30px;
-            transform: translateY(20px);
-            transition: transform 0.5s ease;
-        }
-
-        .slide.active .slide-overlay {
-            transform: translateY(0);
-        }
-
-        .slide-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .slide-desc {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* عناصر التحكم في السلايدر */
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .slider-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .slider-btn:hover {
-            background: var(--primary-dark);
-            transform: scale(1.1);
-        }
-
-        .slider-dots {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--text-light);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dot.active {
-            background: var(--primary-color);
-            transform: scale(1.2);
-        }
-
-        /* ميزات الخدمات */
-        .services-features {
-            margin-top: 40px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px;
-            background: var(--background-light);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: var(--primary-color);
-            color: var(--white);
-            transform: translateY(-5px);
-        }
-
-        .feature-item:hover .feature-icon {
-            background: var(--white);
-            color: var(--primary-color);
-        }
-
-        .feature-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-color);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .feature-text {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* تأثيرات الظهور */
-        [data-aos] {
-            opacity: 0;
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        [data-aos="fade-up"] {
-            transform: translateY(30px);
-        }
-
-        [data-aos="fade-left"] {
-            transform: translateX(30px);
-        }
-
-        [data-aos="fade-right"] {
-            transform: translateX(-30px);
-        }
-
-        [data-aos].aos-animate {
-            opacity: 1;
-            transform: translate(0);
-        }
-
-        @media (max-width: 768px) {
-            .about-title {
-                font-size: 2.2rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .slider-container {
-                height: 400px;
-            }
-        }
-    </style>
-        <style>
         * {
             margin: 0;
             padding: 0;
@@ -678,7 +700,7 @@
             background: var(--white);
             border-radius: 20px;
             width: 90%;
-            max-width: 900px;
+            max-width: 1000px;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
@@ -716,11 +738,26 @@
         }
 
         .modal-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-header-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
             color: var(--white);
             padding: 40px;
-            border-radius: 20px 20px 0 0;
-            position: relative;
         }
 
         .modal-title {
@@ -732,13 +769,21 @@
         .modal-subtitle {
             font-size: 1.1rem;
             opacity: 0.9;
-            margin-bottom: 20px;
         }
 
         .modal-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            opacity: 0.8;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            backdrop-filter: blur(10px);
         }
 
         .modal-body {
@@ -961,409 +1006,817 @@
             .card-actions {
                 flex-direction: column;
             }
+            
+            .modal-header {
+                height: 300px;
+            }
+            
+            .modal-icon {
+                top: 20px;
+                left: 20px;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+      <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        :root {
+            --ns-primary: #96653f;
+            --ns-primary-light: #b08c6d;
+            --ns-primary-dark: #7a5232;
+            --ns-accent: #d4a574;
+            --ns-text-dark: #333333;
+            --ns-text-light: #666666;
+            --ns-bg-light: #f8f5f2;
+            --ns-white: #ffffff;
+            --ns-gold: #d4af37;
+        }
+
+        body {
+            background-color: var(--ns-bg-light);
+            color: var(--ns-text-dark);
+            line-height: 1.6;
+        }
+
+        .ns-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* قسم آراء العملاء */
+        .ns-testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f5f2 0%, #ffffff 50%, #f8f5f2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ns-testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%2396653f" opacity="0.03"><path d="M30,30 Q50,10 70,30 T90,30 T70,70 T30,70 T10,30 T30,30 Z"/></svg>');
+            background-size: 200px;
+        }
+
+        .ns-section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--ns-primary);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .ns-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ns-primary), var(--ns-gold));
+            border-radius: 2px;
+        }
+
+        .ns-section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--ns-text-light);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* شبكة التستيمونيال */
+        .ns-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* كارد التستيمونيال */
+        .ns-testimonial-card {
+            background: var(--ns-white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 1px solid #f0f0f0;
+            overflow: hidden;
+        }
+
+        .ns-testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--ns-primary);
+            opacity: 0.1;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .ns-testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(150, 101, 63, 0.15);
+            border-color: var(--ns-primary);
+        }
+
+        .ns-testimonial-card.ns-featured {
+            background: linear-gradient(135deg, var(--ns-primary), var(--ns-primary-dark));
+            color: var(--ns-white);
+            border: none;
+        }
+
+        .ns-testimonial-card.ns-featured::before {
+            color: var(--ns-white);
+            opacity: 0.2;
+        }
+
+        .ns-testimonial-card.ns-featured .ns-testimonial-text {
+            color: var(--ns-white);
+        }
+
+        .ns-testimonial-card.ns-featured .ns-client-position {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* تقييم النجوم */
+        .ns-rating {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .ns-star {
+            color: var(--ns-gold);
+            font-size: 1.1rem;
+        }
+
+        .ns-testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--ns-text-dark);
+            margin-bottom: 30px;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* معلومات العميل */
+        .ns-client-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .ns-client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--ns-primary), var(--ns-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ns-white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .ns-client-details {
+            flex: 1;
+        }
+
+        .ns-client-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--ns-primary);
+            margin-bottom: 5px;
+        }
+
+        .ns-testimonial-card.ns-featured .ns-client-name {
+            color: var(--ns-white);
+        }
+
+        .ns-client-position {
+            font-size: 0.9rem;
+            color: var(--ns-text-light);
+        }
+
+        /* إحصائيات القسم */
+        .ns-stats-section {
+            background: var(--ns-white);
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .ns-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .ns-stat-item {
+            padding: 20px;
+        }
+
+        .ns-stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--ns-primary);
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--ns-primary), var(--ns-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .ns-stat-label {
+            font-size: 1rem;
+            color: var(--ns-text-light);
+            font-weight: 600;
+        }
+
+        /* شريط الشركاء */
+        .ns-partners-bar {
+            background: var(--ns-white);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .ns-partners-title {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--ns-primary);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .ns-partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            align-items: center;
+        }
+
+        .ns-partner-logo {
+            height: 60px;
+            background: var(--ns-bg-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ns-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .ns-partner-logo:hover {
+            background: var(--ns-primary);
+            color: var(--ns-white);
+            transform: translateY(-3px);
+        }
+
+        /* تأثيرات الظهور */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(30px);
+        }
+
+        [data-aos="fade-right"] {
+            transform: translateX(30px);
+        }
+
+        [data-aos="fade-left"] {
+            transform: translateX(-30px);
+        }
+
+        [data-aos="zoom-in"] {
+            transform: scale(0.9);
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
+
+        /* التجاوب */
+        @media (max-width: 768px) {
+            .ns-testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ns-section-title {
+                font-size: 2.2rem;
+            }
+            
+            .ns-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ns-partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .ns-testimonial-card {
+                padding: 30px 20px;
+            }
+            
+            .ns-stats-section {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ns-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ns-partners-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     
+
 </head>
 
 <body>
-      <!-- Header -->
-<header class="fixed w-full bg-white shadow-md z-50">
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-md z-50">
 
-  <!-- Top Contact + Social (desktop only) -->
-  <div class="bg-[#f5f5f5] text-sm text-gray-700 py-3 px-6 border-b border-gray-200 hidden md:flex justify-around items-center">
-    <div class="flex items-center gap-4 rtl:flex-row-reverse">
-      <div class="flex items-center gap-2">
-        <i class="fas fa-phone-alt text-[#96653f]"></i>
-        <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
-      </div>
-      <div class="flex items-center gap-2">
-        <i class="fas fa-envelope text-[#96653f]"></i>
-        <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
-      </div>
-    </div>
-
-    <div class="flex items-center gap-4 rtl:flex-row">
-      <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/nsmatco" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.instagram.com/nsmat.co/" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/966172834228"target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <div class="container mx-auto px-4 py-1 flex items-center justify-between">
-
-    <!-- Logo -->
-    <div class="flex items-center">
-      <div class="w-12 h-15 overflow-hidden flex items-center justify-center">
-        <img src="../asstes/img/unnamed (2).png" alt="شعار نسمات للاستثمار" class="w-full h-full object-cover" />
-      </div>
-      <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
-    </div>
-
-    <!-- Navigation (desktop) -->
-    <nav class="hidden md:flex flex-1 justify-center space-x-8 space-x-reverse">
-      <a href="../index.html" class="text-construction-brown hover:text-[#96653f] font-medium">الرئيسية</a>
-        <a href="../categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">خدمات المقاولات  </a>
-      
-      <a href="commercial.html" class="text-gray-600 hover:text-[#96653f] font-medium">المجال التجاري</a>
-    </nav>
-
-    <!-- Call To Action (desktop) -->
-    <div class="hidden md:block">
-      <a href="#contact" class="border-2 border-[#96653f] text-[#96653f] hover:bg-[#96653f] hover:text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-        اتصل بنا
-      </a>
-    </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="md:hidden text-construction-brown text-3xl p-2 focus:outline-none">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Sidebar Menu -->
-  <aside
-    id="mobile-menu"
-    class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl rounded-l-3xl transform translate-x-full transition-transform duration-400 ease-in-out z-50 overflow-y-auto"
-    aria-label="Mobile menu"
-  >
-    <div class="flex flex-col h-full p-6">
-
-      <!-- Close Button -->
-      <button
-        id="mobile-menu-close"
-        class="self-start mb-8 text-gray-700 hover:text-[#96653f] text-3xl focus:outline-none"
-        aria-label="Close menu"
-      >
-        <i class="fas fa-times"></i>
-      </button>
-
-      <!-- Navigation Links -->
-      <nav class="flex flex-col space-y-6 rtl:text-right">
-        <a href="../index.html" class="text-construction-brown font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">الرئيسية</a>
-       <a href="../categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">خدمات المقاولات  </a>
-        <a href="commercial.html" class="text-gray-700 font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">المجال التجاري</a>
-        
-        <a href="#contact" class="text-white p-2 text-center rounded-lg font-semibold border border-[#96653f] bg-[#96653f] text-lg hover:text-[#96653f] transition-colors duration-300">اتصل بنا</a>
-      </nav>
-
-      <hr class="my-6 border-gray-300" />
-
-      <!-- Contact Info -->
-      <div class="text-gray-700 text-sm space-y-4 rtl:text-right mt-auto">
-        <div class="flex items-center gap-3 justify-end">
+    <!-- Top Contact + Social (desktop only) -->
+    <div
+      class="bg-[#f5f5f5] text-sm text-gray-700 py-3 px-6 border-b border-gray-200 hidden md:flex justify-around items-center">
+      <div class="flex items-center gap-4 rtl:flex-row-reverse">
+        <div class="flex items-center gap-2">
           <i class="fas fa-phone-alt text-[#96653f]"></i>
           <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
         </div>
-        <div class="flex items-center gap-3 justify-end">
+        <div class="flex items-center gap-2">
           <i class="fas fa-envelope text-[#96653f]"></i>
           <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
         </div>
+      </div>
 
-        <!-- Social Icons -->
-        <div class="flex items-center gap-6 mt-4 text-[#96653f] justify-end text-2xl">
-          <a href="https://facebook.com" target="_blank" class="hover:text-[#1d3c34] transition">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="hover:text-[#1d3c34] transition">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="hover:text-[#1d3c34] transition">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/966172834228"target="_blank" class="hover:text-[#1d3c34] transition">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
+      <div class="flex items-center gap-4 rtl:flex-row">
+        <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/"
+          target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/nsmatco" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/nsmat.co/" target="_blank"
+          class="text-[#96653f] hover:text-[#1d3c34] transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/966172834228" target="_blank" class="text-[#96653f] hover:text-[#1d3c34] transition">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </div>
     </div>
-  </aside>
-</header>
 
- <!-- start hero section -->
-    <section class="hero-section relative bg-gray-900 text-white min-h-[800px] flex items-center overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
-        <!-- خلفية الصور المتحركة -->
-        <div class="absolute inset-0 overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
-            <div class="slide active" style="background-image: url('../asstes/img/hotel-services.jpg');"></div>
-           
-            
-            <!-- تأثير الضباب العام -->
-            <div class="fog-overlay"></div>
-            
-            <!-- تأثير الضباب على منطقة المحتوى -->
-            <div class="content-fog"></div>
+    <!-- Navbar -->
+    <div class="container mx-auto px-4 py-1 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div class="w-12 h-15 overflow-hidden flex items-center justify-center">
+          <img src="../asstes/img/unnamed (2).png" alt="شعار نسمات للاستثمار" class="w-full h-full object-cover" />
         </div>
+        <h1 class="mr-3 text-xl font-bold text-construction-brown font-amiri">نسمات للاستثمار</h1>
+      </div>
 
-        <!-- المحتوى -->
-        <div class="relative z-10 w-full flex justify-start pt-5">
-          <div class="content-container w-full md:w-2/3 lg:w-1/2 min-h-[800px] flex items-center py-12 pr-8 md:pr-16 lg:pr-[200px] pl-4 md:pl-16">
-  <div class="hero-content w-full">
+      <!-- Navigation (desktop) -->
+      <nav class="hidden md:flex flex-1 justify-center space-x-8 space-x-reverse">
+        <a href="../index.html" class="text-construction-brown hover:text-[#96653f] font-medium">الرئيسية</a>
+        <a href="../categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">خدمات
+          المقاولات </a>
 
-    <!-- العنوان الفرعي -->
-    <div class="mb-3 text-animation">
-      <h2 class="text-2xl font-bold text-[#96653f]">نسمات للخدمات الفندقية</h2>
-    </div>
+        <a href="commercial.html" class="text-gray-600 hover:text-[#96653f] font-medium">المجال التجاري</a>
+      </nav>
 
-    <!-- العنوان الرئيسي -->
-    <h1 class="hero-title text-5xl font-bold mb-6 text-animation delay-1">
-      فخامة الإقامة واحترافية الإدارة
-    </h1>
+      <!-- Call To Action (desktop) -->
+      <div class="hidden md:block">
+        <a href="#contact"
+          class="border-2 border-[#96653f] text-[#96653f] hover:bg-[#96653f] hover:text-white font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+          اتصل بنا
+        </a>
+      </div>
 
-    <!-- الوصف القصير -->
-    <p class="hero-subtitle text-2xl mb-12 text-gray-300 text-animation delay-1">
-      حيث تلتقي الراحة بالفخامة في كل تفصيلة.
-    </p>
-
-    <!-- الوصف داخل صندوق التدرج -->
-    <div class="hero-description bg-gradient-to-l from-[#96653f]/80 to-transparent rounded-lg border-r-4 border-[#96653f] mb-10 text-animation delay-2">
-      <p class="text-xl font-medium text-white">
-        نقدم في <span class="text-amber-300 font-semibold">نسمات</span> تجربة فندقية فريدة تجمع بين 
-        الرفاهية والنظافة والاحترافية —  
-        مع خدمات تشغيل وصيانة وإدارة فنادق بمستوى عالمي في مختلف مدن المملكة.
-      </p>
-    </div>
-
-    <!-- الزر -->
-    <div class="mb-12 text-animation delay-3">
-      <button class="hero-button border-2 border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-10 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2">
-        <i class="fas fa-hotel text-amber-300"></i>
-        اكتشف خدماتنا الفندقية
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-construction-brown text-3xl p-2 focus:outline-none">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
 
-   
+    <!-- Mobile Sidebar Menu -->
+    <aside id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl rounded-l-3xl transform translate-x-full transition-transform duration-400 ease-in-out z-50 overflow-y-auto"
+      aria-label="Mobile menu">
+      <div class="flex flex-col h-full p-6">
 
-  </div>
-</div>
+        <!-- Close Button -->
+        <button id="mobile-menu-close"
+          class="self-start mb-8 text-gray-700 hover:text-[#96653f] text-3xl focus:outline-none"
+          aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
 
+        <!-- Navigation Links -->
+        <nav class="flex flex-col space-y-6 rtl:text-right">
+          <a href="../index.html"
+            class="text-construction-brown font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">الرئيسية</a>
+          <a href="../categorization-services/index.html" class="text-gray-600 hover:text-[#96653f] font-medium">خدمات
+            المقاولات </a>
+          <a href="commercial.html"
+            class="text-gray-700 font-semibold text-lg hover:text-[#96653f] transition-colors duration-300">المجال
+            التجاري</a>
+
+          <a href="#contact"
+            class="text-white p-2 text-center rounded-lg font-semibold border border-[#96653f] bg-[#96653f] text-lg hover:text-[#96653f] transition-colors duration-300">اتصل
+            بنا</a>
+        </nav>
+
+        <hr class="my-6 border-gray-300" />
+
+        <!-- Contact Info -->
+        <div class="text-gray-700 text-sm space-y-4 rtl:text-right mt-auto">
+          <div class="flex items-center gap-3 justify-end">
+            <i class="fas fa-phone-alt text-[#96653f]"></i>
+            <a href="tel:+966500000000" class="hover:underline">966172834228+</a>
+          </div>
+          <div class="flex items-center gap-3 justify-end">
+            <i class="fas fa-envelope text-[#96653f]"></i>
+            <a href="mailto:info@nesmat.com" class="hover:underline">info@nesmat.com</a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-6 mt-4 text-[#96653f] justify-end text-2xl">
+            <a href="https://facebook.com" target="_blank" class="hover:text-[#1d3c34] transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-[#1d3c34] transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="hover:text-[#1d3c34] transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/966172834228" target="_blank" class="hover:text-[#1d3c34] transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+    </aside>
+  </header>
 
-    <!-- من نحن -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <!-- المحتوى على اليسار -->
-                <div class="about-content" data-aos="fade-right">
-                    <h2 class="about-title">من نحن</h2>
-                    <p class="about-text">
-                        نحن في <span class="highlight">نسمات للاستثمار</span> نمتلك خبرة واسعة في تقديم خدمات فندقية متميزة تشمل تشغيل وإدارة وصيانة الفنادق والشقق الفندقية المخدومة.
-                    </p>
-                    <p class="about-text">
-                        رؤيتنا تتمثل في توفير تجربة إقامة راقية تتجاوز توقعات النزلاء، عبر الجمع بين الرفاهية والأصالة والاحترافية في التفاصيل.
-                    </p>
+  <!-- start hero section -->
+  <section
+    class="hero-section relative bg-gray-900 text-white min-h-[800px] flex items-center overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+    <!-- خلفية الصور المتحركة -->
+    <div class="absolute inset-0 overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+      <div class="slide active" style="background-image: url('../asstes/img/hotel-services.jpg');"></div>
 
-<!-- قسم الإحصائيات -->
-<div class="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
 
-  <!-- كرت إحصائية -->
-  <div class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
-    <!-- الخلفية المتحركة -->
-    <div class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0"></div>
+      <!-- تأثير الضباب العام -->
+      <div class="fog-overlay"></div>
+
+      <!-- تأثير الضباب على منطقة المحتوى -->
+      <div class="content-fog"></div>
+    </div>
 
     <!-- المحتوى -->
-    <div class="relative z-10">
-      <div class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">+50</div>
-      <div class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">فندق مُدار</div>
-    </div>
-  </div>
+    <div class="relative z-10 w-full flex justify-start pt-5">
+      <div
+        class="content-container w-full md:w-2/3 lg:w-1/2 min-h-[800px] flex items-center py-12 pr-8 md:pr-16 lg:pr-[200px] pl-4 md:pl-16">
+        <div class="hero-content w-full">
 
-  <!-- باقي الكروت -->
-  <div class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
-    <div class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0"></div>
-    <div class="relative z-10">
-      <div class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">15+</div>
-      <div class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">سنة خبرة</div>
-    </div>
-  </div>
+          <!-- العنوان الفرعي -->
+          <div class="mb-3 text-animation">
+            <h2 class="text-2xl font-bold text-[#96653f]">نسمات للخدمات الفندقية</h2>
+          </div>
 
-  <div class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
-    <div class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0"></div>
-    <div class="relative z-10">
-      <div class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">98%</div>
-      <div class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">رضا العملاء</div>
-    </div>
-  </div>
+          <!-- العنوان الرئيسي -->
+          <h1 class="hero-title text-5xl font-bold mb-6 text-animation delay-1">
+            فخامة الإقامة واحترافية الإدارة
+          </h1>
 
-  <div class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
-    <div class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0"></div>
-    <div class="relative z-10">
-      <div class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">24/7</div>
-      <div class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">دعم فني</div>
-    </div>
-  </div>
+          <!-- الوصف القصير -->
+          <p class="hero-subtitle text-2xl mb-12 text-gray-300 text-animation delay-1">
+            حيث تلتقي الراحة بالفخامة في كل تفصيلة.
+          </p>
 
-</div>
+          <!-- الوصف داخل صندوق التدرج -->
+          <div
+            class="hero-description bg-gradient-to-l from-[#96653f]/80 to-transparent rounded-lg border-r-4 border-[#96653f] mb-10 text-animation delay-2">
+            <p class="text-xl font-medium text-white">
+              نقدم في <span class="text-amber-300 font-semibold">نسمات</span> تجربة فندقية فريدة تجمع بين
+              الرفاهية والنظافة والاحترافية —
+              مع خدمات تشغيل وصيانة وإدارة فنادق بمستوى عالمي في مختلف مدن المملكة.
+            </p>
+          </div>
+
+          <!-- الزر -->
+          <div class="mb-12 text-animation delay-3">
+            <button
+              class="hero-button border-2 border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-10 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2">
+              <i class="fas fa-hotel text-amber-300"></i>
+              اكتشف خدماتنا الفندقية
+            </button>
+          </div>
 
 
 
-                    <!-- ميزات الخدمات -->
-                    <div class="services-features">
-                        <h3 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.3rem;">خدماتنا الفندقية المتكاملة</h3>
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <div class="feature-icon">🏨</div>
-                                <span class="feature-text">إدارة الفنادق</span>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🛎️</div>
-                                <span class="feature-text">خدمة الغرف</span>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🔧</div>
-                                <span class="feature-text">الصيانة</span>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">📊</div>
-                                <span class="feature-text">التشغيل</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- سلايدر الصور على اليمين -->
-                <div class="slider-section" data-aos="fade-left">
-                    <div class="slider-container">
-                        <div class="slider">
-                            <!-- Slide 1 -->
-                            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                                <div class="slide-overlay">
-                                    <div class="slide-title">إدارة الفنادق الفاخرة</div>
-                                    <div class="slide-desc">نقدم حلول إدارة متكاملة لفنادق الخمس نجوم</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 2 -->
-                            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                                <div class="slide-overlay">
-                                    <div class="slide-title">الشقق الفندقية المخدومة</div>
-                                    <div class="slide-desc">إدارة وتشغيل الشقق الفندقية بأعلى معايير الجودة</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 3 -->
-                            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80');">
-                                <div class="slide-overlay">
-                                    <div class="slide-title">خدمات الصيانة الشاملة</div>
-                                    <div class="slide-desc">صيانة دورية وشاملة لجميع مرافق الفندق</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 4 -->
-                            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
-                                <div class="slide-overlay">
-                                    <div class="slide-title">التشغيل والتدريب</div>
-                                    <div class="slide-desc">تدريب الكوادر وتطوير أنظمة التشغيل</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- عناصر التحكم في السلايدر -->
-                    <div class="slider-controls">
-                        <button class="slider-btn prev-btn">←</button>
-                        <div class="slider-dots">
-                            <span class="dot active" data-slide="0"></span>
-                            <span class="dot" data-slide="1"></span>
-                            <span class="dot" data-slide="2"></span>
-                            <span class="dot" data-slide="3"></span>
-                        </div>
-                        <button class="slider-btn next-btn">→</button>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+      </div>
 
-    <script>
-        // السلايدر
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            let currentSlide = 0;
-            let slideInterval;
+    </div>
+  </section>
 
-            // عرض الشريحة المحددة
-            function showSlide(n) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                
-                currentSlide = (n + slides.length) % slides.length;
-                
-                slides[currentSlide].classList.add('active');
-                dots[currentSlide].classList.add('active');
-            }
+  <!-- من نحن -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <!-- المحتوى على اليسار -->
+        <div class="about-content" data-aos="fade-right">
+          <h2 class="about-title">من نحن</h2>
+          <p class="about-text">
+            نحن في <span class="highlight">نسمات للاستثمار</span> نمتلك خبرة واسعة في تقديم خدمات فندقية متميزة تشمل
+            تشغيل وإدارة وصيانة الفنادق والشقق الفندقية المخدومة.
+          </p>
+          <p class="about-text">
+            رؤيتنا تتمثل في توفير تجربة إقامة راقية تتجاوز توقعات النزلاء، عبر الجمع بين الرفاهية والأصالة والاحترافية
+            في التفاصيل.
+          </p>
 
-            // الشريحة التالية
-            function nextSlide() {
-                showSlide(currentSlide + 1);
-            }
+          <!-- قسم الإحصائيات -->
+          <div class="stats-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
 
-            // الشريحة السابقة
-            function prevSlide() {
-                showSlide(currentSlide - 1);
-            }
+            <!-- كرت إحصائية -->
+            <div
+              class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
+              <!-- الخلفية المتحركة -->
+              <div
+                class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0">
+              </div>
 
-            // بدء التشغيل التلقائي
-            function startSlideShow() {
-                slideInterval = setInterval(nextSlide, 5000);
-            }
+              <!-- المحتوى -->
+              <div class="relative z-10">
+                <div
+                  class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  +50</div>
+                <div
+                  class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  فندق مُدار</div>
+              </div>
+            </div>
 
-            // إيقاف التشغيل التلقائي
-            function stopSlideShow() {
-                clearInterval(slideInterval);
-            }
+            <!-- باقي الكروت -->
+            <div
+              class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
+              <div
+                class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0">
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  15+</div>
+                <div
+                  class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  سنة خبرة</div>
+              </div>
+            </div>
 
-            // الأحداث
-            nextBtn.addEventListener('click', () => {
-                stopSlideShow();
-                nextSlide();
-                startSlideShow();
-            });
+            <div
+              class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
+              <div
+                class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0">
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  98%</div>
+                <div
+                  class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  رضا العملاء</div>
+              </div>
+            </div>
 
-            prevBtn.addEventListener('click', () => {
-                stopSlideShow();
-                prevSlide();
-                startSlideShow();
-            });
+            <div
+              class="relative border-r-4 border-[#96653f] p-8 text-center overflow-hidden group rounded-2xl shadow-lg bg-white transition-all duration-500">
+              <div
+                class="absolute inset-0 bg-[#96653f] scale-x-0 origin-right group-hover:scale-x-100 transition-transform duration-700 ease-out z-0">
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="stat-number text-4xl font-extrabold mb-3 text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  24/7</div>
+                <div
+                  class="stat-text text-lg font-medium text-[#96653f] group-hover:text-white transition-colors duration-500">
+                  دعم فني</div>
+              </div>
+            </div>
 
-            dots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    stopSlideShow();
-                    showSlide(parseInt(this.dataset.slide));
-                    startSlideShow();
-                });
-            });
+          </div>
 
-            // تأثيرات الظهور
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('aos-animate');
-                    }
-                });
-            }, { threshold: 0.1 });
 
-            document.querySelectorAll('[data-aos]').forEach(el => {
-                observer.observe(el);
-            });
 
-            // بدء السلايدر
-            startSlideShow();
+          <!-- ميزات الخدمات -->
+          <div class="services-features">
+            <h3 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.3rem;">خدماتنا الفندقية المتكاملة
+            </h3>
+            <div class="features-grid">
+              <div class="feature-item">
+              <div class="feature-icon">🏨</div>
+                <span class="feature-text">إدارة الفنادق</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🛎️</div>
+                <span class="feature-text">خدمة الغرف</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🔧</div>
+                <span class="feature-text">الصيانة</span>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <span class="feature-text">التشغيل</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- سلايدر الصور على اليمين -->
+        <div class="slider-section" data-aos="fade-left">
+          <div class="slider-container">
+            <div class="slider">
+              <!-- Slide 1 -->
+              <div class="slide active"
+                style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                <div class="slide-overlay">
+                  <div class="slide-title">إدارة الفنادق الفاخرة</div>
+                  <div class="slide-desc">نقدم حلول إدارة متكاملة لفنادق الخمس نجوم</div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                <div class="slide-overlay">
+                  <div class="slide-title">الشقق الفندقية المخدومة</div>
+                  <div class="slide-desc">إدارة وتشغيل الشقق الفندقية بأعلى معايير الجودة</div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=80');">
+                <div class="slide-overlay">
+                  <div class="slide-title">خدمات الصيانة الشاملة</div>
+                  <div class="slide-desc">صيانة دورية وشاملة لجميع مرافق الفندق</div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="slide"
+                style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');">
+                <div class="slide-overlay">
+                  <div class="slide-title">التشغيل والتدريب</div>
+                  <div class="slide-desc">تدريب الكوادر وتطوير أنظمة التشغيل</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- عناصر التحكم في السلايدر -->
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn">←</button>
+            <div class="slider-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+            </div>
+            <button class="slider-btn next-btn">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // السلايدر
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      let currentSlide = 0;
+      let slideInterval;
+
+      // عرض الشريحة المحددة
+      function showSlide(n) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        currentSlide = (n + slides.length) % slides.length;
+
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+
+      // الشريحة التالية
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      // الشريحة السابقة
+      function prevSlide() {
+        showSlide(currentSlide - 1);
+      }
+
+      // بدء التشغيل التلقائي
+      function startSlideShow() {
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      // إيقاف التشغيل التلقائي
+      function stopSlideShow() {
+        clearInterval(slideInterval);
+      }
+
+      // الأحداث
+      nextBtn.addEventListener('click', () => {
+        stopSlideShow();
+        nextSlide();
+        startSlideShow();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        stopSlideShow();
+        prevSlide();
+        startSlideShow();
+      });
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', function () {
+          stopSlideShow();
+          showSlide(parseInt(this.dataset.slide));
+          startSlideShow();
         });
-    </script>
+      });
+
+      // تأثيرات الظهور
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('aos-animate');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-aos]').forEach(el => {
+        observer.observe(el);
+      });
+
+      // بدء السلايدر
+      startSlideShow();
+    });
+  </script>
 
   <!-- ليه نحن مميزين -->
   <section class="py-20 bg-gray-50 px-6 md:px-20" data-aos="fade-up">
@@ -1372,48 +1825,59 @@
       <p class="text-gray-600 mt-3">نقدم مزيجاً من الفخامة، الاحترافية، والدقة في كل تفاصيل خدماتنا.</p>
     </div>
 
-<div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-  <!-- الكرت الأول -->
-  <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group" data-aos="fade-right">
-    <div class="flex items-center justify-center mb-4">
-      <i class="fas fa-hotel text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
-    </div>
-    <h3 class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">خبرة تشغيلية</h3>
-    <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
-      نمتلك كوادر مؤهلة تدير الفنادق باحترافية عالية وتجربة تمتد لسنوات.
-    </p>
-  </div>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <!-- الكرت الأول -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group"
+        data-aos="fade-right">
+        <div class="flex items-center justify-center mb-4">
+          <i
+            class="fas fa-hotel text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
+        </div>
+        <h3
+          class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">
+          خبرة تشغيلية</h3>
+        <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
+          نمتلك كوادر مؤهلة تدير الفنادق باحترافية عالية وتجربة تمتد لسنوات.
+        </p>
+      </div>
 
-  <!-- الكرت الثاني -->
-  <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group" data-aos="fade-up">
-    <div class="flex items-center justify-center mb-4">
-      <i class="fas fa-concierge-bell text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
-    </div>
-    <h3 class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">خدمة راقية</h3>
-    <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
-      نلتزم بتقديم أعلى معايير الراحة والضيافة لعملائنا.
-    </p>
-  </div>
+      <!-- الكرت الثاني -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group" data-aos="fade-up">
+        <div class="flex items-center justify-center mb-4">
+          <i
+            class="fas fa-concierge-bell text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
+        </div>
+        <h3
+          class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">
+          خدمة راقية</h3>
+        <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
+          نلتزم بتقديم أعلى معايير الراحة والضيافة لعملائنا.
+        </p>
+      </div>
 
-  <!-- الكرت الثالث -->
-  <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group" data-aos="fade-left">
-    <div class="flex items-center justify-center mb-4">
-      <i class="fas fa-gem text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
+      <!-- الكرت الثالث -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition duration-500 group"
+        data-aos="fade-left">
+        <div class="flex items-center justify-center mb-4">
+          <i
+            class="fas fa-gem text-6xl text-[#96653f] transition-all duration-500 group-hover:scale-110 group-hover:text-[#b78b5e]"></i>
+        </div>
+        <h3
+          class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">
+          فخامة التفاصيل</h3>
+        <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
+          نهتم بكل تفصيلة صغيرة لتنعكس الفخامة في كل زاوية.
+        </p>
+      </div>
     </div>
-    <h3 class="text-2xl font-semibold text-[#96653f] mb-2 text-center transition-colors duration-500 group-hover:text-[#b78b5e]">فخامة التفاصيل</h3>
-    <p class="text-gray-700 text-center group-hover:text-gray-900 transition-colors duration-500">
-      نهتم بكل تفصيلة صغيرة لتنعكس الفخامة في كل زاوية.
-    </p>
-  </div>
-</div>
 
-<!-- رابط مكتبة Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- رابط مكتبة Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
   </section>
 
-     <!-- قسم الخدمات -->
+   <!-- قسم الخدمات -->
     <section class="services-section">
         <div class="container">
             <h2 class="section-title">خدماتنا المتكاملة</h2>
@@ -1621,9 +2085,12 @@
             </button>
             
             <div class="modal-header">
-                <div class="modal-icon" id="modalIcon"></div>
-                <h2 id="modalTitle" class="modal-title"></h2>
-                <p id="modalSubtitle" class="modal-subtitle"></p>
+                <img id="modalImage" src="" alt="">
+                <div class="modal-header-overlay">
+                    <div class="modal-icon" id="modalIcon"></div>
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                    <p id="modalSubtitle" class="modal-subtitle"></p>
+                </div>
             </div>
             
             <div class="modal-body">
@@ -1672,6 +2139,7 @@
                 title: "الشقق الفندقية المخدومة",
                 subtitle: "إدارة متكاملة لتجربة إقامة استثنائية",
                 icon: "🏠",
+                image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80",
                 description: "نقدم حزمة متكاملة من الخدمات لإدارة الشقق الفندقية المخدومة، بدءاً من استقبال النزلاء وحتى تقديم الخدمات اليومية. نضمن تجربة إقامة استثنائية تجمع بين راحة المنزل ورفاهية الفندق، مع الحفاظ على أعلى معايير الجودة والخدمة.",
                 features: [
                     {
@@ -1722,6 +2190,7 @@
                 title: "إدارة الفنادق",
                 subtitle: "حلول إدارية متكاملة بمعايير عالمية",
                 icon: "🏨",
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
                 description: "إدارة شاملة للفنادق بكافة أقسامها التشغيلية والإدارية. نضمن تقديم خدمات فندقية استثنائية مع الحفاظ على أعلى معايير الجودة والكفاءة التشغيلية، وتحقيق أعلى معدلات رضا العملاء.",
                 features: [
                     {
@@ -1772,6 +2241,7 @@
                 title: "إدارة المشاريع",
                 subtitle: "تخطيط وتنفيذ متكامل للمشاريع الفندقية",
                 icon: "📋",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
                 description: "إشراف متكامل على المشاريع الفندقية منذ مرحلة التخطيط وحتى التشغيل. نضمن تنفيذ المشاريع ضمن الميزانية المحددة والجداول الزمنية مع الحفاظ على أعلى معايير الجودة والسلامة.",
                 features: [
                     {
@@ -1822,6 +2292,7 @@
                 title: "الصيانة والتشغيل",
                 subtitle: "ضمان استمرارية العمل بكفاءة عالية",
                 icon: "🔧",
+                image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=1000&q=80",
                 description: "برامج صيانة وقائية وشاملة لجميع مرافق ومعدات الفنادق. نضمن استمرارية العمل دون انقطاع والحفاظ على جودة الخدمات المقدمة، مع تقليل التكاليف التشغيلية وزيادة عمر الأصول.",
                 features: [
                     {
@@ -1872,6 +2343,7 @@
                 title: "الخدمات الغذائية",
                 subtitle: "تجربة طعام استثنائية بمعايير عالمية",
                 icon: "🍽️",
+                image: "https://images.unsplash.com/photo-1559305289-0d0f00a0b5cb?auto=format&fit=crop&w=1000&q=80",
                 description: "إدارة متكاملة للمطاعم والخدمات الغذائية داخل الفنادق. نقدم تجربة طعام استثنائية تجمع بين الإبداع في التقديم والجودة في المذاق، مع الالتزام بأعلى معايير السلامة والنظافة.",
                 features: [
                     {
@@ -1922,6 +2394,7 @@
                 title: "التسويق الفندقي",
                 subtitle: "تعزيز الإشغال والعلامة التجارية",
                 icon: "📈",
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
                 description: "حلول تسويقية متكاملة ومبتكرة لتعزيز وجود الفنادق في السوق وزيادة معدلات الإشغال. نستخدم أحدث استراتيجيات التسويق الرقمي والتقليدي لبناء صورة ذهنية قوية وزيادة العائد على الاستثمار.",
                 features: [
                     {
@@ -1972,6 +2445,7 @@
                 title: "التدريب والتطوير",
                 subtitle: "بناء كوادر بشرية محترفة",
                 icon: "🎓",
+                image: "https://images.unsplash.com/photo-1589988020891-b7a5dd9e8c39?auto=format&fit=crop&w=1000&q=80",
                 description: "برامج تدريبية متخصصة وشاملة لتطوير مهارات الكوادر البشرية في القطاع الفندقي. نهدف إلى رفع مستوى الخدمة وتمكين الموظفين من تقديم أفضل ما لديهم، مما ينعكس إيجاباً على تجربة النزلاء وسمعة الفندق.",
                 features: [
                     {
@@ -2022,6 +2496,7 @@
                 title: "الاستشارات الفندقية",
                 subtitle: "حلول استشارية لتحسين الأداء",
                 icon: "💼",
+                image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=80",
                 description: "استشارات متخصصة واحترافية في مجال إدارة وتشغيل الفنادق. نقدم تحليلاً دقيقاً للأداء ووضع استراتيجيات فعالة لتحسين العمليات التشغيلية وزيادة الربحية وتعزيز القدرة التنافسية في السوق.",
                 features: [
                     {
@@ -2072,6 +2547,7 @@
                 title: "خدمة النزلاء",
                 subtitle: "تجربة إقامة لا تُنسى",
                 icon: "🔔",
+                image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80",
                 description: "تقديم تجربة استثنائية وشخصية للنزلاء من خلال خدمة متميزة على مدار الساعة. نحرص على تلبية كافة احتياجات النزلاء وتجاوز توقعاتهم، مما يضمن تجربة إقامة فريدة تترك انطباعاً إيجابياً يدوم طويلاً.",
                 features: [
                     {
@@ -2141,6 +2617,7 @@
         function openModal(serviceId) {
             const service = services[serviceId];
             
+            document.getElementById('modalImage').src = service.image;
             document.getElementById('modalIcon').textContent = service.icon;
             document.getElementById('modalTitle').textContent = service.title;
             document.getElementById('modalSubtitle').textContent = service.subtitle;
@@ -2224,251 +2701,445 @@
         });
     </script>
 
-  <!-- آراء العملاء -->
-  <section class="py-20 bg-gray-50" data-aos="fade-up">
-    <h2 class="text-4xl font-bold text-center text-gold mb-14">آراء عملائنا</h2>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
-      <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-right">
-        <p class="italic text-gray-700 mb-4">"تجربة فريدة من نوعها! الخدمة راقية جدًا والفندق مريح ونظيف."</p>
-        <h4 class="font-semibold text-gold">أحمد العتيبي</h4>
-        <span class="text-sm text-gray-500">نزيل فندق جدة</span>
-      </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-up">
-        <p class="italic text-gray-700 mb-4">"احترافية عالية في إدارة الفنادق وتعاون رائع من الفريق."</p>
-        <h4 class="font-semibold text-gold">سارة القحطاني</h4>
-        <span class="text-sm text-gray-500">صاحبة مشروع</span>
-      </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg" data-aos="fade-left">
-        <p class="italic text-gray-700 mb-4">"أفضل تجربة إقامة على الإطلاق، التفاصيل الصغيرة تصنع الفارق!"</p>
-        <h4 class="font-semibold text-gold">محمد الغامدي</h4>
-        <span class="text-sm text-gray-500">نزيل خميس مشيط</span>
-      </div>
-    </div>
-  </section>
+
+ <!-- قسم آراء العملاء -->
+    <section class="ns-testimonials">
+        <div class="ns-container">
+            <h2 class="ns-section-title">آراء عملائنا</h2>
+            <p class="ns-section-subtitle">ثقة عملائنا هي شهادتنا الحقيقية على تميز خدماتنا</p>
+            
+            <div class="ns-testimonials-grid">
+                <!-- رأي 1 -->
+                <div class="ns-testimonial-card" data-aos="fade-right">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "تجربة فريدة من نوعها! الخدمة راقية جدًا والفندق مريح ونظيف. فريق العمل محترف ويقدم خدمة متميزة على مدار الساعة."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">أ</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">أحمد العتيبي</h4>
+                            <span class="ns-client-position">نزيل فندق جدة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 2 (مميز) -->
+                <div class="ns-testimonial-card ns-featured" data-aos="fade-up">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "احترافية عالية في إدارة الفنادق وتعاون رائع من الفريق. نسمات حولت فكرتنا إلى واقع مذهل يتجاوز التوقعات."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">س</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">سارة القحطاني</h4>
+                            <span class="ns-client-position">صاحبة مشروع فندقي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 3 -->
+                <div class="ns-testimonial-card" data-aos="fade-left">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "أفضل تجربة إقامة على الإطلاق، التفاصيل الصغيرة تصنع الفارق! الخدمة سريعة والغرف فاخرة والإطلالة رائعة."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">م</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">محمد الغامدي</h4>
+                            <span class="ns-client-position">نزيل خميس مشيط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 4 -->
+                <div class="ns-testimonial-card" data-aos="fade-right">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "فريق نسمات استطاع زيادة إشغال فندقنا بنسبة 40% خلال 6 أشهر فقط. استراتيجياتهم التسويقية فعالة ومبتكرة."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">ف</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">فهد الرشيد</h4>
+                            <span class="ns-client-position">مدير سلسلة فنادق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 5 -->
+                <div class="ns-testimonial-card" data-aos="fade-up">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "برامج التدريب التي قدمتها نسمات لفريقنا أحدثت نقلة نوعية في مستوى الخدمة. الكوادر أصبحت أكثر احترافية."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">ن</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">نورة السديري</h4>
+                            <span class="ns-client-position">مديرة موارد بشرية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 6 -->
+                <div class="ns-testimonial-card" data-aos="fade-left">
+                    <div class="ns-rating">
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                        <span class="ns-star">★</span>
+                    </div>
+                    <p class="ns-testimonial-text">
+                        "الاستشارات التي قدمتها نسمات ساعدتنا في تحسين عملياتنا وزيادة الربحية. فريق استشاري على أعلى مستوى."
+                    </p>
+                    <div class="ns-client-info">
+                        <div class="ns-client-avatar">خ</div>
+                        <div class="ns-client-details">
+                            <h4 class="ns-client-name">خالد الفهد</h4>
+                            <span class="ns-client-position">مستثمر في القطاع الفندقي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- إحصائيات -->
+            <div class="ns-stats-section" data-aos="zoom-in">
+                <div class="ns-stats-grid">
+                    <div class="ns-stat-item">
+                        <div class="ns-stat-number">98%</div>
+                        <div class="ns-stat-label">رضا العملاء</div>
+                    </div>
+                    <div class="ns-stat-item">
+                        <div class="ns-stat-number">500+</div>
+                        <div class="ns-stat-label">عميل راضي</div>
+                    </div>
+                    <div class="ns-stat-item">
+                        <div class="ns-stat-number">4.9</div>
+                        <div class="ns-stat-label">تقييم متوسط</div>
+                    </div>
+                    <div class="ns-stat-item">
+                        <div class="ns-stat-number">95%</div>
+                        <div class="ns-stat-label">يعيدون التعامل</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شركاء النجاح -->
+            <div class="ns-partners-bar" data-aos="fade-up">
+                <h3 class="ns-partners-title">يثق بنا كبار العملاء</h3>
+                <div class="ns-partners-grid">
+                    <div class="ns-partner-logo">فندق الرياض</div>
+                    <div class="ns-partner-logo">مجموعة السديري</div>
+                    <div class="ns-partner-logo">سلسلة موفنبيك</div>
+                    <div class="ns-partner-logo">مجموعة العليان</div>
+                    <div class="ns-partner-logo">فنادق القصر</div>
+                    <div class="ns-partner-logo">منتجعات الريف</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // تأثيرات الظهور
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('[data-aos]').forEach(el => {
+                observer.observe(el);
+            });
+
+            // تأثير hover إضافي للكروت
+            const cards = document.querySelectorAll('.ns-testimonial-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-10px) scale(1)';
+                });
+            });
+        });
+    </script>
+
 
   <!-- تواصل معنا -->
   <section class="py-20 bg-white text-center" data-aos="fade-up">
     <h2 class="text-4xl font-bold text-gold mb-8">تواصل معنا</h2>
-    <p class="text-gray-700 mb-10 text-lg">للتعاون أو الاستفسار يمكنكم التواصل عبر البريد الإلكتروني أو الاتصال مباشرة بمسؤول قسم الفنادق.</p>
+    <p class="text-gray-700 mb-10 text-lg">للتعاون أو الاستفسار يمكنكم التواصل عبر البريد الإلكتروني أو الاتصال مباشرة
+      بمسؤول قسم الفنادق.</p>
     <div class="bg-gray-50 inline-block shadow-xl rounded-2xl p-8">
       <p class="text-gray-800 mb-2 text-lg">📞 <span class="font-bold text-gold">+966 55 777 3333</span></p>
-      <p class="text-gray-800 text-lg">📧 <a href="mailto:hotels@nasmat.sa" class="text-blue-600 underline">hotels@nasmat.sa</a></p>
+      <p class="text-gray-800 text-lg">📧 <a href="mailto:hotels@nasmat.sa"
+          class="text-blue-600 underline">hotels@nasmat.sa</a></p>
     </div>
   </section>
-   <!-- Footer -->
-    <footer class="footer-gradient text-white relative overflow-hidden">
-        <!-- الأشكال العائمة -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="floating-shape shape-1 absolute top-10 left-10 w-20 h-20 bg-[#96653f] opacity-10 rounded-full"></div>
-            <div class="floating-shape shape-2 absolute top-1/4 right-20 w-16 h-16 bg-[#96653f] opacity-10 rounded-lg"></div>
-            <div class="floating-shape shape-3 absolute bottom-20 left-1/4 w-24 h-24 bg-[#96653f] opacity-10 rounded-full"></div>
+  <!-- Footer -->
+  <footer class="footer-gradient text-white relative overflow-hidden">
+    <!-- الأشكال العائمة -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="floating-shape shape-1 absolute top-10 left-10 w-20 h-20 bg-[#96653f] opacity-10 rounded-full"></div>
+      <div class="floating-shape shape-2 absolute top-1/4 right-20 w-16 h-16 bg-[#96653f] opacity-10 rounded-lg"></div>
+      <div class="floating-shape shape-3 absolute bottom-20 left-1/4 w-24 h-24 bg-[#96653f] opacity-10 rounded-full">
+      </div>
+    </div>
+
+    <!-- قسم النشرة البريدية -->
+    <div class="relative z-10 border-b border-gray-700">
+      <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">انضم إلى قائمة بريدنا الإلكتروني</h2>
+          <p class="text-gray-300 mb-8 max-w-2xl mx-auto">اشترك في نشرتنا البريدية لتصلك آخر أخبار الشركة وعروضنا
+            الحصرية مباشرة إلى بريدك الإلكتروني</p>
+
+          <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+            <input type="email" placeholder="بريدك الإلكتروني"
+              class="newsletter-input flex-1 px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#96653f]">
+            <button
+              class="bg-[#96653f] hover:bg-[#1e4a43] text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">
+              اشترك الآن
+            </button>
+          </div>
         </div>
-        
-        <!-- قسم النشرة البريدية -->
-        <div class="relative z-10 border-b border-gray-700">
-            <div class="container mx-auto px-4 py-12">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4">انضم إلى قائمة بريدنا الإلكتروني</h2>
-                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">اشترك في نشرتنا البريدية لتصلك آخر أخبار الشركة وعروضنا الحصرية مباشرة إلى بريدك الإلكتروني</p>
-                    
-                    <div class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
-                        <input 
-                            type="email" 
-                            placeholder="بريدك الإلكتروني" 
-                            class="newsletter-input flex-1 px-4 py-3 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#96653f]"
-                        >
-                        <button class="bg-[#96653f] hover:bg-[#1e4a43] text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">
-                            اشترك الآن
-                        </button>
-                    </div>
-                </div>
+      </div>
+    </div>
+
+
+    <!-- المحتوى الرئيسي -->
+    <div class="relative z-10 py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <!-- معلومات الشركة -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center mb-6">
+              <div class="w-16 h-20 overflow-hidden flex items-center justify-center ml-4">
+                <img src="../asstes/img/unnamed (2).png" alt="">
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">نسمات للاستثمار</h3>
+                <p class="text-[#96653f] font-medium">بناء المستقبل بثقة</p>
+              </div>
             </div>
-        </div>
-        
-        
-        <!-- المحتوى الرئيسي -->
-        <div class="relative z-10 py-16">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                    <!-- معلومات الشركة -->
-                    <div class="lg:col-span-2">
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-20 overflow-hidden flex items-center justify-center ml-4">
-                                <img src="./asstes/img/unnamed (2).png" alt="">
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold">نسمات للاستثمار</h3>
-                                <p class="text-[#96653f] font-medium">بناء المستقبل بثقة</p>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-300 mb-6 leading-relaxed">
-                            شركة رائدة في مجال الاستثمار والبناء في المملكة العربية السعودية، نقدم حلولاً متكاملة في المقاولات والخدمات الفندقية والاستثمار التجاري. نلتزم بمعايير الجودة العالمية ونحرص على تقديم أفضل الخدمات لعملائنا الكرام.
-                        </p>
-                        
-                        <div class="flex space-x-3 space-x-reverse">
-                            <a href="https://x.com/nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/nsmat.co/" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                           
-                            <a href="https://www.tiktok.com/@nsmatco" class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- روابط سريعة -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">روابط سريعة</h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="index.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                    الرئيسية
-                                </a>
-                            </li>
-                            <li>
-                                <a href="hotels.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                    الخدمات الفندقية
-                                </a>
-                            </li>
-                            <li>
-                                <a href="commercial.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                    المجال التجاري
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                    عن الشركة
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
-                                    اتصل بنا
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- خدماتنا -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">خدماتنا</h3>
-                        <ul class="space-y-3">
-                            <li>
-                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-building text-[#96653f] ml-2"></i>
-                                    المقاولات والبناء
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-drafting-compass text-[#96653f] ml-2"></i>
-                                    التصميم والتخطيط
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-paint-roller text-[#96653f] ml-2"></i>
-                                    أعمال التشطيب
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-tasks text-[#96653f] ml-2"></i>
-                                    إدارة المشاريع
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
-                                    <i class="fas fa-hotel text-[#96653f] ml-2"></i>
-                                    الاستثمار الفندقي
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- معلومات الاتصال -->
-                    <div>
-                        <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">معلومات الاتصال</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
-                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">العنوان</h4>
-                                    <p class="text-gray-300 text-sm">المملكة العربية السعودية - خميس مشيط    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
-                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                    <i class="fas fa-phone text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">الهاتف</h4>
-                                    <p class="text-gray-300 text-sm">966172834228+</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
-                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                    <i class="fas fa-envelope text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">البريد الإلكتروني</h4>
-                                    <p class="text-gray-300 text-sm">nsmat.ncc@gmail.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
-                                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
-                                    <i class="fas fa-clock text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium">أوقات العمل</h4>
-                                    <p class="text-gray-300 text-sm">الأحد - الخميس: 8 ص - 5 م</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              شركة رائدة في مجال الاستثمار والبناء في المملكة العربية السعودية، نقدم حلولاً متكاملة في المقاولات
+              والخدمات الفندقية والاستثمار التجاري. نلتزم بمعايير الجودة العالمية ونحرص على تقديم أفضل الخدمات لعملائنا
+              الكرام.
+            </p>
+
+            <div class="flex space-x-3 space-x-reverse">
+              <a href="https://x.com/nsmatco"
+                class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/people/%D8%B4%D8%B1%D9%83%D8%A9-%D9%86%D8%B3%D9%85%D8%A7%D8%AA-%D9%84%D9%84%D8%A5%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1/61582196828103/"
+                class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/nsmat.co/"
+                class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://www.tiktok.com/@nsmatco"
+                class="social-icon w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-[#96653f] transition duration-300">
+                <i class="fab fa-tiktok"></i>
+              </a>
             </div>
-        </div>
-        
-        <!-- القسم السفلي -->
-        <div class="relative z-10 border-t border-gray-700 py-8 bg-gray-900 bg-opacity-50">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-center md:text-right mb-4 md:mb-0">
-                        <p class="text-gray-400">
-                            © 2024 شركة نسمات للاستثمار. جميع الحقوق محفوظة.
-                        </p>
-                    </div>
-                    
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الخصوصية</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">شروط الاستخدام</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الاسترجاع</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">الأسئلة الشائعة</a>
-                    </div>
+          </div>
+
+          <!-- روابط سريعة -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">روابط سريعة</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="index.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i
+                    class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  الرئيسية
+                </a>
+              </li>
+              <li>
+                <a href="hotels.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i
+                    class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  الخدمات الفندقية
+                </a>
+              </li>
+              <li>
+                <a href="commercial.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i
+                    class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  المجال التجاري
+                </a>
+              </li>
+              <li>
+                <a href="about.html" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i
+                    class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  عن الشركة
+                </a>
+              </li>
+              <li>
+                <a href="#contact" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i
+                    class="fas fa-chevron-left text-[#96653f] ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  اتصل بنا
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- خدماتنا -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">خدماتنا</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i class="fas fa-building text-[#96653f] ml-2"></i>
+                  المقاولات والبناء
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i class="fas fa-drafting-compass text-[#96653f] ml-2"></i>
+                  التصميم والتخطيط
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i class="fas fa-paint-roller text-[#96653f] ml-2"></i>
+                  أعمال التشطيب
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i class="fas fa-tasks text-[#96653f] ml-2"></i>
+                  إدارة المشاريع
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-link text-gray-300 hover:text-white flex items-center group">
+                  <i class="fas fa-hotel text-[#96653f] ml-2"></i>
+                  الاستثمار الفندقي
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- معلومات الاتصال -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 border-[#96653f] inline-block">معلومات الاتصال</h3>
+            <div class="space-y-4">
+              <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-white"></i>
                 </div>
+                <div>
+                  <h4 class="font-medium">العنوان</h4>
+                  <p class="text-gray-300 text-sm">المملكة العربية السعودية - خميس مشيط </p>
+                </div>
+              </div>
+
+              <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">الهاتف</h4>
+                  <p class="text-gray-300 text-sm">966172834228+</p>
+                </div>
+              </div>
+
+              <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">البريد الإلكتروني</h4>
+                  <p class="text-gray-300 text-sm">nsmat.ncc@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start hover-lift p-3 rounded-lg footer-card">
+                <div class="w-10 h-10 bg-[#96653f] rounded-full flex items-center justify-center ml-3 flex-shrink-0">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">أوقات العمل</h4>
+                  <p class="text-gray-300 text-sm">الأحد - الخميس: 8 ص - 5 م</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <!-- القسم السفلي -->
+    <div class="relative z-10 border-t border-gray-700 py-8 bg-gray-900 bg-opacity-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-right mb-4 md:mb-0">
+            <p class="text-gray-400">
+              © 2024 شركة نسمات للاستثمار. جميع الحقوق محفوظة.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-6">
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الخصوصية</a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">شروط الاستخدام</a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">سياسة الاسترجاع</a>
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">الأسئلة الشائعة</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1000, once: true });</script>
   <script src="../asstes/js/script.js"></script>
 </body>
+
 </html>
