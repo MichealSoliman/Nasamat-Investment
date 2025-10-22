@@ -271,46 +271,62 @@
   </aside>
 </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section pt-24 pb-20 text-white overflow-hidden h-[700px] rounded-b-[80px] lg:rounded-b-[120px]">
-<div class="container mx-auto px-4 text-center pt-10 pb-20 text-white">
-  <div class="max-w-4xl mx-auto" data-aos="fade-up">
-    
-    <!-- العنوان -->
-    <h1 class="text-4xl md:text-6xl font-bold mb-6 font-amiri text-shadow-lg pt-5">
-      خدمات المقاولات المتكاملة
-    </h1>
-    
-    <!-- الوصف -->
-    <p class="text-xl md:text-2xl mb-8 leading-relaxed text-gray-200" data-aos="fade-up" data-aos-delay="200">
-      نقدم حلولاً شاملة في المقاولات العامة، من التصميم الهندسي والإشراف الفني 
-      إلى التنفيذ والتشطيبات النهائية 
-    </p>
+  <!-- start hero section -->
+    <section class="hero-section relative bg-gray-900 text-white min-h-[800px] flex items-center overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+        <!-- خلفية الصور المتحركة -->
+        <div class="absolute inset-0 overflow-hidden rounded-b-[80px] lg:rounded-b-[120px]">
+            <div class="slide active" style="background-image: url('../asstes/img/contracting.jpg');"></div>
+            
+            
+            <!-- تأثير الضباب العام -->
+            <div class="fog-overlay"></div>
+            
+            <!-- تأثير الضباب على منطقة المحتوى -->
+            <div class="content-fog"></div>
+        </div>
 
-    <!-- نقاط مميزة -->
-    <ul class="text-lg text-gray-300 space-y-3 mb-10" data-aos="fade-up" data-aos-delay="300">
-      <li class="flex justify-center items-center gap-3">
-        <i class="fas fa-hard-hat text-construction-brown text-2xl"></i>
-        <span>فريق هندسي متخصص بخبرة ميدانية واسعة</span>
-      </li>
-      <li class="flex justify-center items-center gap-3">
-        <i class="fas fa-drafting-compass text-construction-brown text-2xl"></i>
-        <span>تصميمات عصرية تجمع بين الجودة والجمال</span>
-      </li>
-     
-    </ul>
+<!-- المحتوى -->
+<div class="relative z-10 w-full flex justify-start pt-5">
+  <div
+    class="content-container w-full md:w-2/3 lg:w-1/2 min-h-[800px] flex items-center py-12 pr-8 md:pr-16 lg:pr-[200px] pl-4 md:pl-16">
+    <div class="hero-content w-full">
 
-    
-    <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-      <a href="#services" 
-          class="border-2 border-white text-white hover:bg-white hover:text-[#96653f] font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-         <i class="fas fa-layer-group"></i> استعرض خدماتنا
-      </a>
+      <!-- العنوان الفرعي -->
+      <div class="mb-3 text-animation">
+        <h2 class="text-2xl font-bold text-[#96653f]">نسمات للمقاولات العامة</h2>
+      </div>
 
-      <a href="https://wa.me/966172233888" 
-         class="border-2 border-white text-white hover:bg-white hover:text-[#96653f] font-bold py-3 px-10 rounded-lg text-lg transition duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
-         <i class="fas fa-envelope-open-text"></i> اطلب استشارة مجانية
-      </a>
+      <!-- العنوان الرئيسي -->
+      <h1 class="hero-title text-5xl font-bold mb-6 text-animation delay-1">
+        نبني بإتقان... لنصنع الثقة في كل مشروع
+      </h1>
+
+      <!-- الوصف القصير -->
+      <p class="hero-subtitle text-2xl mb-12 text-gray-300 text-animation delay-1">
+        خبرة تمتد لأعوام في تنفيذ المشاريع الإنشائية باحترافية عالية.
+      </p>
+
+      <!-- الوصف داخل صندوق التدرج -->
+      <div
+        class="hero-description bg-gradient-to-l from-[#96653f]/80 to-transparent rounded-lg border-r-4 border-[#96653f] mb-10 text-animation delay-2">
+        <p class="text-xl font-medium text-white">
+          تقدم <span class="text-amber-300 font-semibold">نسمات للمقاولات</span> حلولاً متكاملة في مجالات 
+          <span class="text-amber-300 font-semibold">الإنشاءات</span>،
+          <span class="text-amber-300 font-semibold">التشطيبات</span>، و
+          <span class="text-amber-300 font-semibold">الصيانة</span> — 
+          نعمل بمعايير هندسية دقيقة وجودة معتمدة لضمان مشاريع مستدامة تواكب التطور العمراني الحديث.
+        </p>
+      </div>
+
+      <!-- الزر -->
+      <div class="mb-12 text-animation delay-3">
+        <button
+          class="hero-button border border-[#96653f] hover:bg-[#96653f] text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center gap-2">
+          <i class="fas fa-hard-hat text-amber-300"></i>
+          اكتشف خدمات المقاولات
+        </button>
+      </div>
+
     </div>
   </div>
 </div>
