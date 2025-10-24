@@ -255,6 +255,7 @@ html {
     
 /* end style hero */
     /* style our work */
+
         /* أنيميشن الظهور */
         @keyframes fadeInUp {
             from {
@@ -278,6 +279,12 @@ html {
             }
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         .project-card {
             opacity: 0;
             animation: fadeInUp 0.8s ease-out forwards;
@@ -296,12 +303,11 @@ html {
 
         .project-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 25px 50px rgba(150, 101, 63, 0.2);
         }
 
         .project-overlay {
-            background: linear-gradient(to top, rgba(150, 100, 63, 0.9) 0%, transparent 100%);
-
+            background: linear-gradient(to top, rgba(150, 101, 63, 0.9) 0%, transparent 100%);
             opacity: 0;
             transition: all 0.4s ease;
         }
@@ -314,6 +320,24 @@ html {
         .filter-btn {
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: width 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .filter-btn:hover::before {
+            width: 100%;
         }
 
         .filter-btn.active,
@@ -329,8 +353,41 @@ html {
         .delay-3 { animation-delay: 0.3s; }
         .delay-4 { animation-delay: 0.4s; }
         .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
 
+        /* تأثيرات إضافية */
+        .project-image {
+            transition: transform 0.7s ease;
+        }
 
+        .project-item:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* شريط التقدم */
+        .progress-bar {
+            height: 4px;
+            background-color: #e5e7eb;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #96653f;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+ 
 /* end style our work */
 
 
