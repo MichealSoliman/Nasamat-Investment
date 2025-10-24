@@ -254,7 +254,7 @@ html {
         }
     
 /* end style hero */
-    
+    /* style our work */
         /* أنيميشن الظهور */
         @keyframes fadeInUp {
             from {
@@ -330,7 +330,7 @@ html {
         .delay-4 { animation-delay: 0.4s; }
         .delay-5 { animation-delay: 0.5s; }
 
-/* style our work */
+
 /* end style our work */
 
 
